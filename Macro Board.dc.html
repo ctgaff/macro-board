@@ -30,7 +30,13 @@ input:focus-visible,button:focus-visible{outline:2px solid #749dc4;outline-offse
         <div style="font-size:13px;color:rgba(242,242,243,.62)">Latest prints from official releases. Surprise is actual minus consensus forecast.</div>
       </div>
       <div style="display:flex;align-items:center;gap:14px">
-        <div style="font-size:12px;color:rgba(242,242,243,.62)">{{ lensLabel }}</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6)">Lens</span>
+          <div style="display:flex;border:1px solid rgba(242,242,243,.22)">
+            <button onClick="{{ setRates }}" title="Hotter data = bearish (stocks, gold)" style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;padding:4px 10px;border:0;cursor:pointer;background:{{ ratesBg }};color:#f2f2f3" style-hover="background:rgba(116,157,196,.35)">Rates</button>
+            <button onClick="{{ setGrowth }}" title="Stronger data = bullish (USD)" style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;padding:4px 10px;border:0;border-left:1px solid rgba(242,242,243,.22);cursor:pointer;background:{{ growthBg }};color:#f2f2f3" style-hover="background:rgba(116,157,196,.35)">Growth · USD</button>
+          </div>
+        </div>
         <div style="font-size:12px;color:rgba(242,242,243,.62);border-left:1px solid rgba(242,242,243,.16);padding-left:14px;display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;background:{{ statusColor }}"></span><span>{{ updatedText }}</span></div>
       </div>
     </header>
@@ -483,7 +489,10 @@ class Component extends DCLogic {
     return sign + abs + unit;
   }
   renderVals() {
-    const growthLens = (this.props.lens ?? 'rates') === 'growth';
+    let saved = null;
+    try { saved = localStorage.getItem('macroboard-lens'); } catch (e) {}
+    const growthLens = (this.state.lens ?? saved ?? this.props.lens ?? 'rates') === 'growth';
+    const pickLens = l => { try { localStorage.setItem('macroboard-lens', l); } catch (e) {} this.setState({ lens: l }); };
     let bull = 0, bear = 0, total = 0;
     const sections = DEFAULTS.map(sec => {
       let sb = 0, sr = 0;
@@ -516,6 +525,10 @@ class Component extends DCLogic {
       sections,
       showSectionBias: this.props.showSectionBias ?? true,
       lensLabel: growthLens ? 'Growth lens' : 'Rate-cut lens',
+      ratesBg: growthLens ? 'transparent' : '#416180',
+      growthBg: growthLens ? '#416180' : 'transparent',
+      setRates: () => pickLens('rates'),
+      setGrowth: () => pickLens('growth'),
       biasTitle: growthLens ? 'USD bias' : 'Risk-asset bias',
       biasSubtitle: growthLens ? 'Bullish = USD stronger' : 'Stocks & gold · inverse for USD',
       lensNote: growthLens
