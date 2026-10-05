@@ -1,65 +1,88 @@
 {
-  "updatedAt": "2026-10-05T04:24:58.079Z",
+  "updatedAt": "2026-10-05T04:34:38.463Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
       "forecast": 1.5,
       "date": "Sep 30",
-      "src": "BEA"
+      "src": "BEA",
+      "period": "2026-04-01",
+      "pending": null
     },
     "retail": {
-      "actual": 1.2,
+      "actual": 1.127,
       "forecast": 0.8,
-      "date": "Sep 16",
-      "src": "Census Bureau"
+      "date": "Sep 28",
+      "src": "Census Bureau",
+      "period": "2026-08-01",
+      "pending": null
     },
     "cpi": {
-      "actual": 3.4,
+      "actual": 3.397,
       "forecast": 3.4,
       "date": "Sep 11",
-      "src": "BLS"
+      "src": "BLS",
+      "period": "2026-08-01",
+      "pending": null
     },
     "ppi": {
-      "actual": 5.4,
+      "actual": 5.414,
       "forecast": 5.3,
-      "date": "Sep 09",
-      "src": "BLS"
+      "date": "Sep 10",
+      "src": "BLS",
+      "period": "2026-08-01",
+      "pending": null
     },
     "pce": {
-      "actual": 3,
+      "actual": 3.419,
       "forecast": 3.3,
-      "date": "Sep 29",
-      "src": "BEA"
+      "date": "Sep 30",
+      "src": "BEA",
+      "period": "2026-08-01",
+      "pending": null
     },
     "nfp": {
       "actual": 29,
       "forecast": 89,
       "date": "Oct 02",
-      "src": "BLS"
+      "src": "BLS",
+      "period": "2026-09-01",
+      "pending": null
     },
     "unemp": {
       "actual": 4.2,
       "forecast": 4.1,
       "date": "Oct 02",
-      "src": "BLS"
+      "src": "BLS",
+      "period": "2026-09-01",
+      "pending": null
     },
     "claims": {
       "actual": 197,
       "forecast": 200,
       "date": "Oct 01",
-      "src": "Dept. of Labor"
+      "src": "Dept. of Labor",
+      "period": "2026-09-26",
+      "pending": {
+        "forecast": 200,
+        "eventDate": "2026-10-08T08:30:00-04:00"
+      }
     },
     "adp": {
       "actual": 90,
       "forecast": 73,
       "date": "Sep 30",
-      "src": "ADP"
+      "src": "ADP",
+      "period": "2026-09-01",
+      "pending": null
     },
     "jolts": {
-      "actual": 7.08,
+      "actual": 7.079,
       "forecast": 7.23,
       "date": "Sep 29",
-      "src": "BLS"
+      "src": "BLS",
+      "period": "2026-08-01",
+      "pending": null
     },
     "mpmi": {
       "actual": 54.5,
@@ -86,9 +109,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 3.62,
-      "forecast": 3.55,
-      "date": "Oct 03",
+      "actual": 4.78,
+      "forecast": 4.67,
+      "date": "Oct 01",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -135,25 +158,25 @@
     }
   ],
   "risk": {
-    "score": 0.44,
-    "label": "Risk-on",
-    "asOf": "Oct 02",
+    "score": -0.44,
+    "label": "Risk-off",
+    "asOf": "Oct 01",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "16.8",
-        "ref": "18.2",
-        "signal": 1,
+        "value": "16.4",
+        "ref": "15.9",
+        "signal": -1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.12%",
-        "ref": "3.05%",
+        "value": "3.24%",
+        "ref": "2.80%",
         "signal": -1,
         "weight": 1
       },
@@ -161,8 +184,8 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "5,812",
-        "ref": "5,740",
+        "value": "7,723",
+        "ref": "7,670",
         "signal": 1,
         "weight": 1
       },
@@ -170,17 +193,17 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "98.40",
-        "ref": "97.90",
-        "signal": 1,
+        "value": "109.42",
+        "ref": "110.81",
+        "signal": -1,
         "weight": 1
       },
       {
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Change over 20 days",
-        "value": "0.42%",
-        "ref": "0.38%",
+        "value": "0.45%",
+        "ref": "0.43%",
         "signal": 0,
         "weight": 0.5
       }
