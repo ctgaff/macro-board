@@ -1,0 +1,48 @@
+{
+  "updatedAt": "2026-10-05T11:00:00Z",
+  "indicators": {
+    "gdp":    { "actual": 2.2,  "forecast": 1.5,  "date": "Sep 30", "src": "BEA" },
+    "mpmi":   { "actual": 54.5, "forecast": 54.8, "date": "Oct 01", "src": "ISM" },
+    "spmi":   { "actual": 55.4, "forecast": 54.1, "date": "Sep 03", "src": "ISM" },
+    "retail": { "actual": 1.2,  "forecast": 0.8,  "date": "Sep 16", "src": "Census Bureau" },
+    "conf":   { "actual": 81.9, "forecast": 89.2, "date": "Sep 29", "src": "Conference Board" },
+    "cpi":    { "actual": 3.4,  "forecast": 3.4,  "date": "Sep 11", "src": "BLS" },
+    "ppi":    { "actual": 5.4,  "forecast": 5.3,  "date": "Sep 09", "src": "BLS" },
+    "pce":    { "actual": 3.0,  "forecast": 3.3,  "date": "Sep 29", "src": "BEA" },
+    "y2":     { "actual": 3.62, "forecast": 3.55, "date": "Oct 03", "src": "Treasury · vs 21-day avg" },
+    "nfp":    { "actual": 29,   "forecast": 89,   "date": "Oct 02", "src": "BLS" },
+    "unemp":  { "actual": 4.2,  "forecast": 4.1,  "date": "Oct 02", "src": "BLS" },
+    "claims": { "actual": 197,  "forecast": 200,  "date": "Oct 01", "src": "Dept. of Labor" },
+    "adp":    { "actual": 90,   "forecast": 73,   "date": "Sep 30", "src": "ADP" },
+    "jolts":  { "actual": 7.08, "forecast": 7.23, "date": "Sep 29", "src": "BLS" }
+  },
+  "risk": {
+    "score": 0.44, "label": "Risk-on", "asOf": "Oct 02",
+    "gauges": [
+      { "id": "vix", "name": "VIX", "note": "Equity volatility", "value": "16.8", "ref": "18.2", "signal": 1, "weight": 1 },
+      { "id": "hy", "name": "High-yield spread", "note": "Credit stress", "value": "3.12%", "ref": "3.05%", "signal": -1, "weight": 1 },
+      { "id": "spx", "name": "S&P 500", "note": "Equities", "value": "5,812", "ref": "5,740", "signal": 1, "weight": 1 },
+      { "id": "audjpy", "name": "AUD/JPY", "note": "FX risk barometer", "value": "98.40", "ref": "97.90", "signal": 1, "weight": 1 },
+      { "id": "curve", "name": "10y–2y curve", "note": "Change over 20 days", "value": "0.42%", "ref": "0.38%", "signal": 0, "weight": 0.5 }
+    ]
+  },
+  "cot": {
+    "asOf": "Sep 29",
+    "ccys": [
+      { "ccy": "EUR", "net": 85200, "chg": 4100, "pct": 78 },
+      { "ccy": "GBP", "net": 32400, "chg": -2800, "pct": 64 },
+      { "ccy": "JPY", "net": -95300, "chg": -6200, "pct": 8 },
+      { "ccy": "CHF", "net": -28100, "chg": 900, "pct": 22 },
+      { "ccy": "CAD", "net": -142600, "chg": -9400, "pct": 6 },
+      { "ccy": "AUD", "net": -48300, "chg": 3500, "pct": 35 },
+      { "ccy": "NZD", "net": -12100, "chg": 1200, "pct": 41 },
+      { "ccy": "USD", "net": 18400, "chg": -1500, "pct": 55 }
+    ]
+  },
+  "upcoming": [
+    { "date": "Oct 07", "time": "08:30", "name": "Trade Balance", "section": "Growth", "forecast": "−$70.1B", "previous": "−$78.3B" },
+    { "date": "Oct 08", "time": "10:00", "name": "JOLTS Job Openings", "section": "Jobs", "forecast": "7.15M", "previous": "7.08M" },
+    { "date": "Oct 09", "time": "08:30", "name": "Unemployment Claims", "section": "Jobs", "forecast": "205K", "previous": "197K" },
+    { "date": "Oct 15", "time": "08:30", "name": "CPI y/y", "section": "Inflation", "forecast": "3.3%", "previous": "3.4%" }
+  ]
+}

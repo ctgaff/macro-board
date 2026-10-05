@@ -1,0 +1,6 @@
+{
+  "_note": "Values with no free API (ISM PMIs, Conference Board). Update after each release; anything here overrides fetched data. To fill a missing forecast, add e.g. \"ppi\": { \"forecast\": 5.3 }.",
+  "mpmi": { "actual": 54.5, "date": "Oct 01" },
+  "spmi": { "actual": 55.4, "date": "Sep 03" },
+  "conf": { "actual": 81.9, "date": "Sep 29" }
+}

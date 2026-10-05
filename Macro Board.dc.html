@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-e15e1bdd-e94b-4ed9-8c91-fab0c5477423/styles.css">
+<script src="_ds/industry-e15e1bdd-e94b-4ed9-8c91-fab0c5477423/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&amp;family=Barlow+Condensed:wght@400;600&amp;display=swap">
+<style>
+body{margin:0;background:#18191b;color:#f2f2f3;font-family:"Barlow",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#94bce3;text-underline-offset:3px}a:hover{color:#b5d9fd}
+::selection{background:rgba(116,157,196,.35)}
+input:focus-visible,button:focus-visible{outline:2px solid #749dc4;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#18191b;background-image:linear-gradient(rgba(242,242,243,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(242,242,243,.035) 1px,transparent 1px);background-size:34px 34px;padding:34px clamp(16px,4vw,48px) 48px;font-variant-numeric:tabular-nums">
+  <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:34px">
+
+    <header style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(242,242,243,.16);padding-bottom:20px">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94bce3">US macro · {{ weekLabel }}</div>
+        <h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:42px;line-height:1.05;letter-spacing:-.015em">Macro Board</h1>
+        <div style="font-size:13px;color:rgba(242,242,243,.62)">Latest prints from official releases. Surprise is actual minus consensus forecast.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="font-size:12px;color:rgba(242,242,243,.62)">{{ lensLabel }}</div>
+        <div style="font-size:12px;color:rgba(242,242,243,.62);border-left:1px solid rgba(242,242,243,.16);padding-left:14px;display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;background:{{ statusColor }}"></span><span>{{ updatedText }}</span></div>
+      </div>
+    </header>
+
+    <div style="display:flex;flex-wrap:wrap;gap:34px;align-items:flex-start">
+
+      <main style="flex:2 1 600px;min-width:0;display:flex;flex-direction:column;gap:34px">
+        <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="3">
+          <section style="position:relative;border:1px solid rgba(242,242,243,.16);padding:6px 0 4px">
+            <span style="position:absolute;top:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+            <span style="position:absolute;top:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+            <span style="position:absolute;bottom:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+            <span style="position:absolute;bottom:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+            <div style="overflow-x:auto">
+              <div style="min-width:600px">
+                <div style="display:grid;grid-template-columns:minmax(0,1.9fr) 104px repeat(3,minmax(70px,1fr)) 76px;align-items:center;column-gap:10px;padding:10px 18px 10px;border-bottom:1px solid rgba(242,242,243,.16)">
+                  <h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em">{{ sec.title }}</h2>
+                  <div style="display:flex;justify-content:center">
+                    <sc-if value="{{ showSectionBias }}" hint-placeholder-val="{{ true }}">
+                      <span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#94bce3">{{ sec.biasLabel }}</span>
+                    </sc-if>
+                  </div>
+                  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6);text-align:right">Actual</div>
+                  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6);text-align:right">Forecast</div>
+                  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6);text-align:right">Surprise</div>
+                  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6);text-align:right">Date</div>
+                </div>
+                <sc-for list="{{ sec.rows }}" as="row" hint-placeholder-count="5">
+                  <div style="display:grid;grid-template-columns:minmax(0,1.9fr) 104px repeat(3,minmax(70px,1fr)) 76px;align-items:center;column-gap:10px;padding:6px 18px;border-bottom:1px solid rgba(242,242,243,.07);font-size:15px" style-hover="background:rgba(242,242,243,.035)">
+                    <div style="display:flex;flex-direction:column;min-width:0;line-height:1.2">
+                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ row.name }}</span>
+                      <span style="font-size:11px;color:rgba(242,242,243,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ row.src }}</span>
+                    </div>
+                    <div style="display:flex;justify-content:center">
+                      <sc-if value="{{ row.isBull }}">
+                        <span style="display:inline-flex;align-items:center;justify-content:center;gap:6px;width:96px;padding:4px 0;background:#416180;border:1px solid #749dc4;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.02em;color:#f2f2f3">▲ Bullish</span>
+                      </sc-if>
+                      <sc-if value="{{ row.isBear }}">
+                        <span style="display:inline-flex;align-items:center;justify-content:center;gap:6px;width:96px;padding:4px 0;background:oklch(0.42 0.11 25);border:1px solid oklch(0.62 0.13 25);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.02em;color:#f2f2f3">▼ Bearish</span>
+                      </sc-if>
+                      <sc-if value="{{ row.isNeutral }}">
+                        <span style="display:inline-flex;align-items:center;justify-content:center;width:96px;padding:4px 0;border:1px dashed rgba(242,242,243,.28);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.02em;color:rgba(242,242,243,.7)">– Neutral</span>
+                      </sc-if>
+                    </div>
+                    <div style="text-align:right;color:#f2f2f3">{{ row.actualText }}</div>
+                    <div style="text-align:right;color:rgba(242,242,243,.78)">{{ row.forecastText }}</div>
+                    <div style="text-align:right;font-weight:500;color:{{ row.surpriseColor }}">{{ row.surprise }}</div>
+                    <div style="text-align:right;font-size:14px;color:rgba(242,242,243,.78)">{{ row.date }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </section>
+        </sc-for>
+        <section style="position:relative;border:1px solid rgba(242,242,243,.16);padding:16px 18px 18px;display:flex;flex-direction:column;gap:16px">
+          <span style="position:absolute;top:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;top:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px">
+            <h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em">Pair bias from risk mood</h2>
+            <span style="font-size:12px;color:rgba(242,242,243,.6)">{{ pairsHead }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.55)">
+              <span>Risk currencies</span><span>Safe havens</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border:1px solid rgba(242,242,243,.16)">
+              <sc-for list="{{ ccyTilt }}" as="c" hint-placeholder-count="8">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 4px;border-right:1px solid rgba(242,242,243,.08);background:{{ c.bg }}">
+                  <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px">{{ c.ccy }}</span>
+                  <span style="font-size:12px;color:rgba(242,242,243,.75)">{{ c.text }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px">
+            <sc-for list="{{ pairs }}" as="p" hint-placeholder-count="28">
+              <div style="display:flex;flex-direction:column;gap:4px;padding:8px 10px;background:{{ p.bg }};border:1px {{ p.borderStyle }} {{ p.border }}">
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                  <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:.02em">{{ p.name }}</span>
+                  <span style="font-size:12px;color:rgba(242,242,243,.75)">{{ p.text }}</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:4px">
+                  <span style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(242,242,243,.85)">{{ p.label }}</span>
+                  <sc-if value="{{ p.crowded }}">
+                    <span title="{{ p.crowdedWhy }}" style="font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:1px 4px;border:1px solid #f2f2f3;color:#f2f2f3">Crowded</span>
+                  </sc-if>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <p style="margin:0;font-size:12px;line-height:1.5;color:rgba(242,242,243,.55);text-wrap:pretty">Each currency carries a fixed risk sensitivity (AUD, NZD highest; JPY, CHF lowest). Pair bias = risk score × (base − quote sensitivity). Strong at ±0.6, moderate at ±0.3. This reflects risk mood only, not each economy's data. "Crowded" marks pairs where speculator positioning (COT) is already at an extreme in the direction of the bias.</p>
+        </section>
+
+        <section style="position:relative;border:1px solid rgba(242,242,243,.16);padding:16px 0 6px;display:flex;flex-direction:column">
+          <span style="position:absolute;top:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;top:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px;padding:0 18px 12px">
+            <h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em">Positioning (COT)</h2>
+            <span style="font-size:12px;color:rgba(242,242,243,.6)">Large speculators · CFTC · as of {{ cotAsOf }}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:52px minmax(0,2fr) 78px minmax(0,1.3fr) 104px;align-items:center;column-gap:14px;padding:8px 18px;border-top:1px solid rgba(242,242,243,.16);border-bottom:1px solid rgba(242,242,243,.16);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6)">
+            <span>Ccy</span><span>Net position (contracts)</span><span style="text-align:right">Wk chg</span><span>3-yr percentile</span><span style="text-align:right">Signal</span>
+          </div>
+          <sc-for list="{{ cotRows }}" as="c" hint-placeholder-count="8">
+            <div style="display:grid;grid-template-columns:52px minmax(0,2fr) 78px minmax(0,1.3fr) 104px;align-items:center;column-gap:14px;padding:8px 18px;border-bottom:1px solid rgba(242,242,243,.07);font-size:14px">
+              <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px">{{ c.ccy }}</span>
+              <div style="display:flex;align-items:center;gap:10px;min-width:0">
+                <div style="position:relative;flex:1;height:12px">
+                  <div style="position:absolute;top:-3px;bottom:-3px;left:50%;width:1px;background:rgba(242,242,243,.35)"></div>
+                  <div style="position:absolute;top:0;bottom:0;left:{{ c.barLeft }};width:{{ c.barWidth }};background:{{ c.barColor }}"></div>
+                </div>
+                <span style="width:64px;text-align:right">{{ c.netText }}</span>
+              </div>
+              <span style="text-align:right;color:{{ c.chgColor }}">{{ c.chgText }}</span>
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="position:relative;flex:1;height:8px;border:1px solid rgba(242,242,243,.22)">
+                  <div style="position:absolute;top:0;bottom:0;left:0;width:10%;background:oklch(0.42 0.11 25 / .5)"></div>
+                  <div style="position:absolute;top:0;bottom:0;right:0;width:10%;background:rgba(65,97,128,.6)"></div>
+                  <div style="position:absolute;top:-4px;bottom:-4px;left:{{ c.pctLeft }};width:2px;margin-left:-1px;background:#f2f2f3"></div>
+                </div>
+                <span style="width:30px;text-align:right">{{ c.pctText }}</span>
+              </div>
+              <span style="text-align:right;font-size:12px;letter-spacing:.04em;color:{{ c.flagColor }}">{{ c.flag }}</span>
+            </div>
+          </sc-for>
+          <p style="margin:0;padding:10px 18px 6px;font-size:12px;line-height:1.5;color:rgba(242,242,243,.55);text-wrap:pretty">Net = non-commercial longs minus shorts in each currency's futures (USD = dollar index). Above the 90th or below the 10th percentile of the past three years counts as crowded, which raises the risk of a reversal. Reported weekly: Tuesday positions, published Friday.</p>
+        </section>
+        <p style="margin:0;font-size:12px;line-height:1.5;color:rgba(242,242,243,.55);text-wrap:pretty">{{ lensNote }}</p>
+      </main>
+
+      <aside style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:34px">
+        <section style="position:relative;border:1px solid rgba(242,242,243,.16);padding:20px;display:flex;flex-direction:column;gap:16px">
+          <span style="position:absolute;top:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;top:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+            <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94bce3">{{ biasTitle }}</div>
+            <div style="font-size:11px;color:rgba(242,242,243,.55)">{{ biasSubtitle }}</div>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:12px">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:72px;line-height:.9;letter-spacing:-.02em">{{ scoreText }}</div>
+            <div style="display:flex;flex-direction:column">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px">{{ scoreLabel }}</div>
+              <div style="font-size:12px;color:rgba(242,242,243,.6)">{{ scoreSub }}</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="position:relative;height:10px;border:1px solid rgba(242,242,243,.22)">
+              <div style="position:absolute;top:1px;bottom:1px;left:1px;width:{{ bearPct }};background:oklch(0.42 0.11 25)"></div>
+              <div style="position:absolute;top:1px;bottom:1px;right:1px;width:{{ bullPct }};background:#416180"></div>
+              <div style="position:absolute;top:-5px;bottom:-5px;left:{{ markerLeft }};width:2px;margin-left:-1px;background:#f2f2f3"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(242,242,243,.55)">
+              <span>Bearish</span><span>Bullish</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(242,242,243,.16)">
+            <sc-for list="{{ sectionTallies }}" as="t" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:2px;padding-top:12px">
+                <div style="font-size:12px;color:rgba(242,242,243,.6)">{{ t.title }}</div>
+                <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:20px">{{ t.net }}</div>
+                <div style="font-size:11px;color:rgba(242,242,243,.55)">{{ t.split }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+
+        <section style="position:relative;border:1px solid rgba(242,242,243,.16);padding:20px 0 8px;display:flex;flex-direction:column">
+          <span style="position:absolute;top:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;top:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <div style="padding:0 20px 16px;display:flex;flex-direction:column;gap:14px;border-bottom:1px solid rgba(242,242,243,.16)">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#94bce3">Risk sentiment</div>
+              <div style="font-size:11px;color:rgba(242,242,243,.55)">Close {{ riskAsOf }}</div>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:12px">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:44px;line-height:.95;letter-spacing:-.015em">{{ riskLabel }}</div>
+              <div style="font-size:14px;color:rgba(242,242,243,.62)">{{ riskScoreText }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="position:relative;height:10px;border:1px solid rgba(242,242,243,.22)">
+                <div style="position:absolute;top:1px;bottom:1px;left:1px;right:1px;background:linear-gradient(90deg,oklch(0.42 0.11 25) 0%,oklch(0.42 0.11 25 / .35) 35%,rgba(242,242,243,.06) 35%,rgba(242,242,243,.06) 65%,rgba(65,97,128,.35) 65%,#416180 100%)"></div>
+                <div style="position:absolute;top:-5px;bottom:-5px;left:{{ riskMarker }};width:2px;margin-left:-1px;background:#f2f2f3"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(242,242,243,.55)">
+                <span>Risk-off</span><span>Mixed</span><span>Risk-on</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid rgba(242,242,243,.1)">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+                <span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6)">For USD</span>
+                <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px">{{ riskUsdHead }}</span>
+              </div>
+              <p style="margin:0;font-size:13px;line-height:1.45;color:rgba(242,242,243,.78);text-wrap:pretty">{{ riskUsdText }}</p>
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;font-size:13px">
+                <div style="display:flex;flex-direction:column;gap:2px">
+                  <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.55)">Tends to gain</span>
+                  <span style="font-weight:500;color:#94bce3">{{ riskGain }}</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:2px">
+                  <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.55)">Tends to lose</span>
+                  <span style="font-weight:500;color:oklch(0.7 0.15 25)">{{ riskLose }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <sc-for list="{{ riskGauges }}" as="g" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) auto 64px;column-gap:12px;align-items:center;padding:9px 20px;border-bottom:1px solid rgba(242,242,243,.07)">
+              <div style="display:flex;flex-direction:column;min-width:0;line-height:1.2">
+                <span style="font-size:14px">{{ g.name }}</span>
+                <span style="font-size:11px;color:rgba(242,242,243,.5)">{{ g.note }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;line-height:1.2">
+                <span style="font-size:14px">{{ g.value }}</span>
+                <span style="font-size:11px;color:rgba(242,242,243,.5)">{{ g.refLabel }}</span>
+              </div>
+              <div style="display:flex;justify-content:flex-end">
+                <sc-if value="{{ g.isOn }}">
+                  <span style="width:60px;text-align:center;padding:2px 0;background:#416180;border:1px solid #749dc4;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;color:#f2f2f3">On</span>
+                </sc-if>
+                <sc-if value="{{ g.isOff }}">
+                  <span style="width:60px;text-align:center;padding:2px 0;background:oklch(0.42 0.11 25);border:1px solid oklch(0.62 0.13 25);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;color:#f2f2f3">Off</span>
+                </sc-if>
+                <sc-if value="{{ g.isFlat }}">
+                  <span style="width:60px;text-align:center;padding:2px 0;border:1px dashed rgba(242,242,243,.28);font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;color:rgba(242,242,243,.7)">Flat</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </section>
+
+        <section style="position:relative;border:1px solid rgba(242,242,243,.16);padding:20px 0 8px;display:flex;flex-direction:column">
+          <span style="position:absolute;top:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;top:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;left:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <span style="position:absolute;bottom:-6px;right:-6px;width:11px;height:11px"><span style="position:absolute;left:5px;top:0;width:1px;height:100%;background:rgba(242,242,243,.55)"></span><span style="position:absolute;top:5px;left:0;height:1px;width:100%;background:rgba(242,242,243,.55)"></span></span>
+          <div style="padding:0 20px 12px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(242,242,243,.16)">
+            <h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px">Upcoming releases</h2>
+            <span style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(242,242,243,.6)">Fcst · Prev</span>
+          </div>
+          <sc-for list="{{ upcoming }}" as="u" hint-placeholder-count="6">
+            <div style="display:grid;grid-template-columns:52px minmax(0,1fr) auto;column-gap:12px;align-items:center;padding:10px 20px;border-bottom:1px solid rgba(242,242,243,.07)">
+              <div style="display:flex;flex-direction:column;line-height:1.15">
+                <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px">{{ u.date }}</span>
+                <span style="font-size:11px;color:rgba(242,242,243,.55)">{{ u.time }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;min-width:0;line-height:1.25">
+                <span style="font-size:14px">{{ u.name }}</span>
+                <span style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#94bce3">{{ u.section }}</span>
+              </div>
+              <div style="font-size:14px;text-align:right;white-space:nowrap"><span>{{ u.forecast }}</span><span style="color:rgba(242,242,243,.5)"> · {{ u.previous }}</span></div>
+            </div>
+          </sc-for>
+        </section>
+      </aside>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;lens&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;rates&quot;,&quot;growth&quot;],&quot;default&quot;:&quot;rates&quot;,&quot;tsType&quot;:&quot;'rates'|'growth'&quot;},&quot;showSectionBias&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const DEFAULTS = [
+  { title: 'Growth', rows: [
+    { id: 'gdp', name: 'GDP Growth QoQ', src: 'BEA', unit: '%', dp: 2, pol: 1, actual: '2.20', forecast: '1.50', date: 'Sep 30' },
+    { id: 'mpmi', name: 'Manufacturing PMI', src: 'ISM', unit: '', dp: 1, pol: 1, actual: '54.5', forecast: '54.8', date: 'Oct 01' },
+    { id: 'spmi', name: 'Services PMI', src: 'ISM', unit: '', dp: 1, pol: 1, actual: '55.4', forecast: '54.1', date: 'Sep 03' },
+    { id: 'retail', name: 'Retail Sales MoM', src: 'Census Bureau', unit: '%', dp: 2, pol: 1, actual: '1.20', forecast: '0.80', date: 'Sep 16' },
+    { id: 'conf', name: 'Consumer Confidence', src: 'Conference Board', unit: '', dp: 1, pol: 1, actual: '81.9', forecast: '89.2', date: 'Sep 29' },
+  ]},
+  { title: 'Inflation', rows: [
+    { id: 'cpi', name: 'CPI YoY', src: 'BLS', unit: '%', dp: 1, pol: 1, actual: '3.4', forecast: '3.4', date: 'Sep 11' },
+    { id: 'ppi', name: 'PPI YoY', src: 'BLS', unit: '%', dp: 2, pol: 1, actual: '5.40', forecast: '5.30', date: 'Sep 09' },
+    { id: 'pce', name: 'PCE YoY', src: 'BEA', unit: '%', dp: 2, pol: 1, actual: '3.00', forecast: '3.30', date: 'Sep 29' },
+    { id: 'y2', name: '2Y Treasury Yield', src: 'Treasury · vs 21-day avg', unit: '%', dp: 2, pol: 1, actual: '3.62', forecast: '3.55', date: 'Oct 03' },
+  ]},
+  { title: 'Jobs market', rows: [
+    { id: 'nfp', name: 'Non-Farm Payrolls', src: 'BLS', unit: 'k', dp: 0, pol: 1, actual: '29', forecast: '89', date: 'Oct 02' },
+    { id: 'unemp', name: 'Unemployment Rate', src: 'BLS', unit: '%', dp: 2, pol: -1, actual: '4.20', forecast: '4.10', date: 'Oct 02' },
+    { id: 'claims', name: 'Weekly Jobless Claims', src: 'Dept. of Labor', unit: 'k', dp: 0, pol: -1, actual: '197', forecast: '200', date: 'Oct 01' },
+    { id: 'adp', name: 'ADP Employment Change', src: 'ADP', unit: 'k', dp: 0, pol: 1, actual: '90', forecast: '73', date: 'Sep 30' },
+    { id: 'jolts', name: 'JOLTS Job Openings', src: 'BLS', unit: 'M', dp: 2, pol: 1, actual: '7.08', forecast: '7.23', date: 'Sep 29' },
+  ]},
+];
+const UPCOMING = [
+  { date: 'Oct 07', time: '08:30', name: 'Trade Balance', section: 'Growth', forecast: '−$70.1B', previous: '−$78.3B' },
+  { date: 'Oct 08', time: '10:00', name: 'JOLTS Job Openings', section: 'Jobs', forecast: '7.15M', previous: '7.08M' },
+  { date: 'Oct 09', time: '08:30', name: 'Weekly Jobless Claims', section: 'Jobs', forecast: '205k', previous: '197k' },
+  { date: 'Oct 10', time: '10:00', name: 'Michigan Sentiment', section: 'Growth', forecast: '82.5', previous: '81.9' },
+  { date: 'Oct 15', time: '08:30', name: 'CPI YoY', section: 'Inflation', forecast: '3.3%', previous: '3.4%' },
+  { date: 'Oct 16', time: '08:30', name: 'Retail Sales MoM', section: 'Growth', forecast: '0.50%', previous: '1.20%' },
+  { date: 'Oct 16', time: '08:30', name: 'PPI YoY', section: 'Inflation', forecast: '5.20%', previous: '5.40%' },
+];
+const SAMPLE_RISK = { score: 0.44, label: 'Risk-on', asOf: 'Oct 02', gauges: [
+  { id: 'vix', name: 'VIX', note: 'Equity volatility', value: '16.8', ref: '18.2', signal: 1 },
+  { id: 'hy', name: 'High-yield spread', note: 'Credit stress', value: '3.12%', ref: '3.05%', signal: -1 },
+  { id: 'spx', name: 'S&P 500', note: 'Equities', value: '5,812', ref: '5,740', signal: 1 },
+  { id: 'audjpy', name: 'AUD/JPY', note: 'FX risk barometer', value: '98.40', ref: '97.90', signal: 1 },
+  { id: 'curve', name: '10y–2y curve', note: 'Change over 20 days', value: '0.42%', ref: '0.38%', signal: 0 },
+]};
+const SAMPLE_COT = { asOf: 'Sep 29', ccys: [
+  { ccy: 'EUR', net: 85200, chg: 4100, pct: 78 }, { ccy: 'GBP', net: 32400, chg: -2800, pct: 64 },
+  { ccy: 'JPY', net: -95300, chg: -6200, pct: 8 }, { ccy: 'CHF', net: -28100, chg: 900, pct: 22 },
+  { ccy: 'CAD', net: -142600, chg: -9400, pct: 6 }, { ccy: 'AUD', net: -48300, chg: 3500, pct: 35 },
+  { ccy: 'NZD', net: -12100, chg: 1200, pct: 41 }, { ccy: 'USD', net: 18400, chg: -1500, pct: 55 },
+]};
+
+class Component extends DCLogic {
+  state = { data: null, status: 'loading' };
+  componentDidMount() {
+    this.load();
+    this.timer = setInterval(() => this.load(), 5 * 60 * 1000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  async load() {
+    try {
+      const r = await fetch('./board.json', { cache: 'no-store' });
+      if (!r.ok) throw new Error(r.status);
+      this.setState({ data: await r.json(), status: 'live' });
+    } catch (e) {
+      this.setState(s => ({ status: s.data ? 'stale' : 'sample' }));
+    }
+  }
+  cotVals(cot) {
+    const max = Math.max(...cot.ccys.map(c => Math.abs(c.net)), 1);
+    const k = n => (n > 0 ? '+' : n < 0 ? '−' : '') + (Math.abs(n) / 1000).toFixed(1) + 'k';
+    return {
+      cotAsOf: cot.asOf,
+      cotRows: cot.ccys.map(c => {
+        const w = (Math.abs(c.net) / max) * 50;
+        return {
+          ccy: c.ccy, netText: k(c.net), chgText: k(c.chg), pctText: c.pct + '%',
+          barLeft: c.net >= 0 ? '50%' : (50 - w) + '%', barWidth: w + '%',
+          barColor: c.net >= 0 ? '#416180' : 'oklch(0.42 0.11 25)',
+          chgColor: c.chg > 0 ? '#94bce3' : c.chg < 0 ? 'oklch(0.7 0.15 25)' : 'rgba(242,242,243,.55)',
+          pctLeft: c.pct + '%',
+          flag: c.pct >= 90 ? 'Crowded long' : c.pct <= 10 ? 'Crowded short' : c.pct >= 75 ? 'Leaning long' : c.pct <= 25 ? 'Leaning short' : 'Neutral',
+          flagColor: c.pct >= 90 || c.pct <= 10 ? '#f2f2f3' : 'rgba(242,242,243,.6)',
+        };
+      }),
+    };
+  }
+  pairBias(score, label) {
+    const cotPct = Object.fromEntries((this.state.data?.cot ?? SAMPLE_COT).ccys.map(c => [c.ccy, c.pct]));
+    const SENS = { AUD: 1, NZD: 1, CAD: 0.5, GBP: 0.25, EUR: 0, USD: -0.5, CHF: -0.75, JPY: -1 };
+    const ORDER = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
+    const sgn = v => (v > 0.005 ? '+' : v < -0.005 ? '−' : '') + Math.abs(v).toFixed(2);
+    const tint = v => {
+      const a = Math.min(Math.abs(v), 1);
+      return v > 0.005 ? `rgba(65,97,128,${(0.25 + a * 0.75).toFixed(2)})` : v < -0.005 ? `oklch(0.42 0.11 25 / ${(0.25 + a * 0.75).toFixed(2)})` : 'transparent';
+    };
+    const pairs = [];
+    ORDER.forEach((b, i) => ORDER.slice(i + 1).forEach(q => {
+      const v = score * (SENS[b] - SENS[q]);
+      const strong = Math.abs(v) >= 0.6, mod = Math.abs(v) >= 0.3;
+      pairs.push({
+        name: `${b}/${q}`, v, text: sgn(v),
+        label: !mod ? 'Neutral' : (strong ? 'Strong ' : '') + (v > 0 ? 'bullish' : 'bearish'),
+        bg: mod ? tint(v) : 'transparent',
+        border: !mod ? 'rgba(242,242,243,.28)' : v > 0 ? '#749dc4' : 'oklch(0.62 0.13 25)',
+        borderStyle: mod ? 'solid' : 'dashed',
+        ...(() => {
+          const pb = cotPct[b], pq = cotPct[q], why = [];
+          if (mod && v > 0) { if (pb >= 90) why.push(`${b} crowded long`); if (pq <= 10) why.push(`${q} crowded short`); }
+          if (mod && v < 0) { if (pb <= 10) why.push(`${b} crowded short`); if (pq >= 90) why.push(`${q} crowded long`); }
+          return { crowded: why.length > 0, crowdedWhy: why.join(', ') };
+        })(),
+      });
+    }));
+    pairs.sort((a, b) => b.v - a.v);
+    const n = k => pairs.filter(p => k(p.v)).length;
+    return {
+      pairs,
+      pairsHead: `${label} · ${n(v => v >= 0.3)} bullish · ${n(v => v <= -0.3)} bearish · ${n(v => Math.abs(v) < 0.3)} neutral`,
+      ccyTilt: Object.entries(SENS).map(([ccy, s]) => ({ ccy, text: sgn(score * s), bg: tint(score * s * 0.6) })),
+    };
+  }
+  fmt(n, dp, unit, signed) {
+    const abs = Math.abs(n).toFixed(dp);
+    const sign = !signed ? (n < 0 ? '−' : '') : n > 0 ? '+' : n < 0 ? '−' : '';
+    return sign + abs + unit;
+  }
+  renderVals() {
+    const growthLens = (this.props.lens ?? 'rates') === 'growth';
+    let bull = 0, bear = 0, total = 0;
+    const sections = DEFAULTS.map(sec => {
+      let sb = 0, sr = 0;
+      const rows = sec.rows.map(r => {
+        const live = this.state.data?.indicators?.[r.id] || {};
+        const actual = live.actual ?? r.actual, forecast = live.forecast ?? r.forecast, date = live.date ?? r.date;
+        const a = parseFloat(actual), f = parseFloat(forecast);
+        const ok = !isNaN(a) && !isNaN(f);
+        const diff = ok ? +(a - f).toFixed(r.dp) : 0;
+        // rates lens: hotter data → hawkish → bearish. growth lens: stronger data → bullish.
+        const dir = Math.sign(diff * r.pol) * (growthLens ? 1 : -1);
+        if (ok) { total++; if (dir > 0) { bull++; sb++; } if (dir < 0) { bear++; sr++; } }
+        return {
+          name: r.name, src: live.src ?? r.src, date,
+          actualText: isNaN(a) ? '—' : this.fmt(a, r.dp, r.unit, false),
+          forecastText: isNaN(f) ? '—' : this.fmt(f, r.dp, r.unit, false),
+          surprise: ok ? this.fmt(diff, r.dp, r.unit, true) : '—',
+          surpriseColor: diff > 0 ? '#94bce3' : diff < 0 ? 'oklch(0.7 0.15 25)' : 'rgba(242,242,243,.55)',
+          isBull: dir > 0, isBear: dir < 0, isNeutral: dir === 0,
+        };
+      });
+      const net = sb - sr;
+      return { title: sec.title, rows, sb, sr, net,
+        biasLabel: net > 0 ? 'Net bullish' : net < 0 ? 'Net bearish' : 'Balanced' };
+    });
+    const score = bull - bear;
+    const pct = total ? (Math.abs(score) / total) * 50 : 0;
+    const strength = total ? Math.abs(score) / total : 0;
+    return {
+      sections,
+      showSectionBias: this.props.showSectionBias ?? true,
+      lensLabel: growthLens ? 'Growth lens' : 'Rate-cut lens',
+      biasTitle: growthLens ? 'USD bias' : 'Risk-asset bias',
+      biasSubtitle: growthLens ? 'Bullish = USD stronger' : 'Stocks & gold · inverse for USD',
+      lensNote: growthLens
+        ? 'Growth lens: data stronger than forecast reads bullish. For unemployment and jobless claims, a lower print counts as stronger.'
+        : 'Rate-cut lens: hotter-than-forecast data raises rate expectations and reads bearish; softer data reads bullish. For unemployment and jobless claims, a higher print counts as softer.',
+      scoreText: (score > 0 ? '+' : score < 0 ? '−' : '') + Math.abs(score),
+      scoreLabel: score === 0 ? 'Balanced' : (strength >= 0.4 ? 'Strongly ' : 'Leaning ') + (score > 0 ? 'bullish' : 'bearish'),
+      scoreSub: `${bull} bullish · ${bear} bearish · ${total - bull - bear} neutral`,
+      bearPct: total ? `calc(${(bear / total) * 100}% - 1px)` : '0',
+      bullPct: total ? `calc(${(bull / total) * 100}% - 1px)` : '0',
+      markerLeft: (50 + (score >= 0 ? pct : -pct)) + '%',
+      sectionTallies: sections.map(s => ({ title: s.title, net: (s.net > 0 ? '+' : s.net < 0 ? '−' : '') + Math.abs(s.net), split: `${s.sb} up · ${s.sr} down` })),
+      upcoming: this.state.data?.upcoming ?? UPCOMING,
+      ...(() => {
+        const r = this.state.data?.risk ?? SAMPLE_RISK;
+        return {
+          riskLabel: r.label,
+          riskScoreText: `Score ${r.score > 0 ? '+' : r.score < 0 ? '−' : ''}${Math.abs(r.score).toFixed(2)}`,
+          riskAsOf: r.asOf,
+          ...this.cotVals(this.state.data?.cot ?? SAMPLE_COT),
+          ...this.pairBias(r.score, r.label),
+          ...(r.score > 0.3 ? {
+            riskUsdHead: 'Mild headwind',
+            riskUsdText: 'Investors move out of safe havens into higher-yielding assets. USD usually softens against AUD, NZD and CAD, but often firms against JPY and CHF, which fall harder.',
+            riskGain: 'AUD · NZD · CAD',
+            riskLose: 'JPY · CHF · USD',
+          } : r.score < -0.3 ? {
+            riskUsdHead: 'Supportive',
+            riskUsdText: 'Investors seek safety and dollar funding. USD usually strengthens against AUD, NZD, CAD and EUR, but JPY and CHF often gain even more, so USD/JPY can fall.',
+            riskGain: 'JPY · CHF · USD',
+            riskLose: 'AUD · NZD · CAD',
+          } : {
+            riskUsdHead: 'No clear tilt',
+            riskUsdText: 'Gauges disagree, so risk mood gives little direction. USD is driven mainly by its own data and rate expectations.',
+            riskGain: '—',
+            riskLose: '—',
+          }),
+          riskMarker: (50 + r.score * 50) + '%',
+          riskGauges: r.gauges.map(g => ({
+            name: g.name, note: g.note, value: g.value,
+            refLabel: (g.id === 'curve' ? '20d ago ' : '20d avg ') + g.ref,
+            isOn: g.signal > 0, isOff: g.signal < 0, isFlat: g.signal === 0,
+          })),
+        };
+      })(),
+      weekLabel: (() => {
+        const d = new Date(this.state.data?.updatedAt || Date.now());
+        const ny = new Date(d.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+        ny.setDate(ny.getDate() - ((ny.getDay() + 6) % 7));
+        return 'week of ' + ny.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      })(),
+      statusColor: this.state.status === 'live' ? '#749dc4' : 'rgba(242,242,243,.35)',
+      updatedText: (() => {
+        const st = this.state.status, u = this.state.data?.updatedAt;
+        if (st === 'loading') return 'Loading data…';
+        if (!u) return 'Sample data · board.json not found';
+        const t = new Date(u).toLocaleString('en-US', { month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'America/New_York' });
+        return `Updated ${t} ET` + (st === 'stale' ? ' · refresh failed' : '');
+      })(),
+    };
+  }
+}
+</script>
+</body>
+</html>
