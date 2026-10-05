@@ -117,10 +117,10 @@ async function daily(id, limit = 45) {
   return o.observations.filter(x => x.value !== '.').map(x => ({ date: x.date, v: parseFloat(x.value) }));
 }
 const avg = a => a.reduce((t, x) => t + x, 0) / a.length;
-const vsAvg = (rows, higherIsOn, band = 0.01) => {
-  const last = rows[0].v, ref = avg(rows.slice(0, 20).map(r => r.v));
+const vsAvg = (rows, higherIsOn, band, n) => {
+  const last = rows[0].v, ref = avg(rows.slice(0, n).map(r => r.v));
   const d = last / ref - 1;
-  return { last, ref, signal: Math.abs(d) < band ? 0 : (d > 0) === higherIsOn ? 1 : -1, date: rows[0].date };
+  return { last, ref, signal: Math.abs(d) < band ? 0 : (d > 0) === higherIsOn ? 1 : -1 };
 };
 let risk = prev.risk || null;
 try {
@@ -129,19 +129,26 @@ try {
   const start = new Date(now - 60 * 864e5).toISOString().slice(0, 10);
   const fx = await (await fetch(`https://api.frankfurter.dev/v1/${start}..?base=AUD&symbols=JPY`)).json();
   const audjpy = Object.entries(fx.rates).map(([date, r]) => ({ date, v: r.JPY })).sort((a, b) => b.date.localeCompare(a.date));
-  const g = [];
-  const v = vsAvg(vix, false, 0.03); if (v.last >= 25) v.signal = -1;
-  g.push({ id: 'vix', name: 'VIX', note: 'Equity volatility', value: v.last.toFixed(1), ref: v.ref.toFixed(1), signal: v.signal, weight: 1 });
-  const h = vsAvg(hy, false, 0.015);
-  g.push({ id: 'hy', name: 'High-yield spread', note: 'Credit stress', value: h.last.toFixed(2) + '%', ref: h.ref.toFixed(2) + '%', signal: h.signal, weight: 1 });
-  const s = vsAvg(sp, true, 0.005);
-  g.push({ id: 'spx', name: 'S&P 500', note: 'Equities', value: Math.round(s.last).toLocaleString('en-US'), ref: Math.round(s.ref).toLocaleString('en-US'), signal: s.signal, weight: 1 });
-  const a = vsAvg(audjpy, true, 0.005);
-  g.push({ id: 'audjpy', name: 'AUD/JPY', note: 'FX risk barometer', value: a.last.toFixed(2), ref: a.ref.toFixed(2), signal: a.signal, weight: 1 });
-  const cNow = curve[0].v, c20 = curve[Math.min(20, curve.length - 1)].v, cd = cNow - c20;
-  g.push({ id: 'curve', name: '10y–2y curve', note: 'Change over 20 days', value: cNow.toFixed(2) + '%', ref: c20.toFixed(2) + '%', signal: Math.abs(cd) < 0.05 ? 0 : cd > 0 ? 1 : -1, weight: 0.5 });
-  const score = round(g.reduce((t, x) => t + x.signal * x.weight, 0) / g.reduce((t, x) => t + x.weight, 0), 2);
-  risk = { score, label: score > 0.3 ? 'Risk-on' : score < -0.3 ? 'Risk-off' : 'Mixed', asOf: fmtDay(vix[0].date + 'T12:00:00Z'), gauges: g };
+  // Each gauge scored twice: fast = vs 5-day average, slow = vs 20-day average.
+  const mk = (id, name, note, rows, higherIsOn, band, fmt) => {
+    const f = vsAvg(rows, higherIsOn, band, 5), s = vsAvg(rows, higherIsOn, band, 20);
+    return { id, name, note, value: fmt(f.last), ref5: fmt(f.ref), ref20: fmt(s.ref), signalFast: f.signal, signalSlow: s.signal, weight: 1 };
+  };
+  const g = [
+    mk('vix', 'VIX', 'Equity volatility', vix, false, 0.03, x => x.toFixed(1)),
+    mk('hy', 'High-yield spread', 'Credit stress', hy, false, 0.015, x => x.toFixed(2) + '%'),
+    mk('spx', 'S&P 500', 'Equities', sp, true, 0.005, x => Math.round(x).toLocaleString('en-US')),
+    mk('audjpy', 'AUD/JPY', 'FX risk barometer', audjpy, true, 0.005, x => x.toFixed(2)),
+  ];
+  if (vix[0].v >= 25) { g[0].signalFast = -1; g[0].signalSlow = -1; }
+  const back = n => curve[Math.min(n, curve.length - 1)].v;
+  const cs = (d, band) => Math.abs(d) < band ? 0 : d > 0 ? 1 : -1;
+  g.push({ id: 'curve', name: '10y–2y curve', note: 'Steepening = risk-on', value: curve[0].v.toFixed(2) + '%', ref5: back(5).toFixed(2) + '%', ref20: back(20).toFixed(2) + '%',
+    signalFast: cs(curve[0].v - back(5), 0.03), signalSlow: cs(curve[0].v - back(20), 0.05), weight: 0.5 });
+  const sc = k => round(g.reduce((t, x) => t + x[k] * x.weight, 0) / g.reduce((t, x) => t + x.weight, 0), 2);
+  const lab = s => s > 0.3 ? 'Risk-on' : s < -0.3 ? 'Risk-off' : 'Mixed';
+  const fast = sc('signalFast'), slow = sc('signalSlow');
+  risk = { fast: { score: fast, label: lab(fast) }, slow: { score: slow, label: lab(slow) }, score: slow, label: lab(slow), asOf: fmtDay(vix[0].date + 'T12:00:00Z'), gauges: g };
 } catch (e) { console.warn('Risk gauges:', e.message); }
 
 // COT positioning: CFTC Legacy futures-only report, non-commercial (large speculator) net positions.
