@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T05:22:08.059Z",
+  "updatedAt": "2026-10-05T16:26:10.019Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -93,13 +93,10 @@
     },
     "spmi": {
       "actual": 55.4,
-      "forecast": 54.1,
+      "forecast": 55.1,
       "date": "Sep 03",
       "src": "ISM",
-      "pending": {
-        "forecast": 55.1,
-        "eventDate": "2026-10-05T10:00:00-04:00"
-      }
+      "pending": null
     },
     "conf": {
       "actual": 81.9,
@@ -117,17 +114,17 @@
   },
   "upcoming": [
     {
-      "date": "Oct 05",
-      "time": "10:00",
-      "name": "ISM Services PMI",
-      "section": "Growth",
-      "forecast": "55.1",
-      "previous": "55.4"
-    },
-    {
       "date": "Oct 07",
       "time": "14:00",
       "name": "FOMC Meeting Minutes",
+      "section": "Rates",
+      "forecast": "—",
+      "previous": "—"
+    },
+    {
+      "date": "Oct 08",
+      "time": "04:30",
+      "name": "FOMC Member Waller Speaks",
       "section": "Rates",
       "forecast": "—",
       "previous": "—"
@@ -159,36 +156,36 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.11,
-      "label": "Mixed"
+      "score": 0.56,
+      "label": "Risk-on"
     },
     "slow": {
-      "score": -0.44,
-      "label": "Risk-off"
+      "score": 0,
+      "label": "Mixed"
     },
-    "score": -0.44,
-    "label": "Risk-off",
-    "asOf": "Oct 01",
+    "score": 0,
+    "label": "Mixed",
+    "asOf": "Oct 02",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "16.4",
-        "ref5": "15.9",
+        "value": "15.3",
+        "ref5": "16.0",
         "ref20": "15.9",
-        "signalFast": 0,
-        "signalSlow": -1,
+        "signalFast": 1,
+        "signalSlow": 1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.24%",
-        "ref5": "3.08%",
-        "ref20": "2.80%",
-        "signalFast": -1,
+        "value": "3.10%",
+        "ref5": "3.11%",
+        "ref20": "2.82%",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -207,9 +204,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.42",
-        "ref5": "109.77",
-        "ref20": "110.81",
+        "value": "110.13",
+        "ref5": "109.76",
+        "ref20": "110.74",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
