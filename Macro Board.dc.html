@@ -120,8 +120,14 @@ input:focus-visible,button:focus-visible{outline:2px solid #749dc4;outline-offse
                   <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;letter-spacing:.02em">{{ p.name }}</span>
                   <span style="font-size:12px;color:rgba(242,242,243,.75)">{{ p.text }}</span>
                 </div>
-                <div style="display:flex;justify-content:space-between;align-items:center;gap:4px">
+                <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px">
                   <span style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(242,242,243,.85)">{{ p.label }}</span>
+                  <sc-if value="{{ p.agree }}">
+                    <span title="Fast and slow readings agree" style="font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:1px 4px;background:rgba(242,242,243,.16);color:#f2f2f3">✓ Both</span>
+                  </sc-if>
+                  <sc-if value="{{ p.diverge }}">
+                    <span title="{{ p.divergeWhy }}" style="font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:1px 4px;border:1px dashed rgba(242,242,243,.4);color:rgba(242,242,243,.75)">≠ {{ p.otherName }}</span>
+                  </sc-if>
                   <sc-if value="{{ p.crowded }}">
                     <span title="{{ p.crowdedWhy }}" style="font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:1px 4px;border:1px solid #f2f2f3;color:#f2f2f3">Crowded</span>
                   </sc-if>
@@ -236,6 +242,13 @@ input:focus-visible,button:focus-visible{outline:2px solid #749dc4;outline-offse
             </sc-for>
             <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(242,242,243,.55);margin-top:-6px">
               <span>Risk-off</span><span>Mixed</span><span>Risk-on</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px {{ alignBorderStyle }} {{ alignBorder }}">
+              <span style="flex:none;width:8px;height:8px;margin-top:6px;background:{{ alignDot }}"></span>
+              <div style="display:flex;flex-direction:column;gap:2px">
+                <span style="font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px">{{ alignHead }}</span>
+                <span style="font-size:12px;line-height:1.4;color:rgba(242,242,243,.7);text-wrap:pretty">{{ alignText }}</span>
+              </div>
             </div>
             <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;border-top:1px solid rgba(242,242,243,.1)">
               <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
@@ -379,6 +392,17 @@ class Component extends DCLogic {
     return {
       riskReads: [read('Fast · 5-day', fast), read('Slow · 20-day', slow)],
       riskBasisName: useFast ? 'fast' : 'slow',
+      otherScore: (useFast ? slow : fast).score,
+      otherName: useFast ? '20d' : '5d',
+      ...(() => {
+        const fl = fast.label, sl = slow.label;
+        const on = { alignDot: '#749dc4', alignBorder: '#749dc4', alignBorderStyle: 'solid' };
+        const muted = { alignDot: 'rgba(242,242,243,.4)', alignBorder: 'rgba(242,242,243,.28)', alignBorderStyle: 'dashed' };
+        if (fl === sl && sl !== 'Mixed') return { ...on, alignHead: `Aligned · ${sl}`, alignText: 'Both readings agree. Strongest setup: trade with the bias at normal size.' };
+        if (sl !== 'Mixed') return { ...muted, alignDot: '#f2f2f3', alignHead: `Pullback within ${sl}`, alignText: `This week (${fl}) is moving against the 20-day trend. Wait for the fast reading to turn back before entering in the trend direction.` };
+        if (fl !== 'Mixed') return { ...muted, alignDot: '#f2f2f3', alignHead: `Possible turn toward ${fl}`, alignText: 'Short-term shift without trend confirmation. Trade small or wait for the slow reading to follow.' };
+        return { ...muted, alignHead: 'No clear risk signal', alignText: 'Both readings are mixed. Lean on each economy\u2019s data, COT and the charts instead.' };
+      })(),
       slowBg: useFast ? 'transparent' : '#416180',
       fastBg: useFast ? '#416180' : 'transparent',
       setSlow: () => this.setState({ basis: 'slow' }),
@@ -411,7 +435,9 @@ class Component extends DCLogic {
       }),
     };
   }
-  pairBias(score, label) {
+  pairBias(score, label, other = score, otherName = '5d') {
+    const dirOf = x => (Math.abs(x) >= 0.3 ? Math.sign(x) : 0);
+    const word = d => (d > 0 ? 'bullish' : d < 0 ? 'bearish' : 'neutral');
     const cotPct = Object.fromEntries((this.state.data?.cot ?? SAMPLE_COT).ccys.map(c => [c.ccy, c.pct]));
     const SENS = { AUD: 1, NZD: 1, CAD: 0.5, GBP: 0.25, EUR: 0, USD: -0.5, CHF: -0.75, JPY: -1 };
     const ORDER = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
@@ -430,6 +456,11 @@ class Component extends DCLogic {
         bg: mod ? tint(v) : 'transparent',
         border: !mod ? 'rgba(242,242,243,.28)' : v > 0 ? '#749dc4' : 'oklch(0.62 0.13 25)',
         borderStyle: mod ? 'solid' : 'dashed',
+        ...(() => {
+          const v2 = other * (SENS[b] - SENS[q]);
+          const same = dirOf(v) === dirOf(v2);
+          return { agree: mod && same, diverge: mod && !same, otherName, divergeWhy: `${otherName} reading is ${word(dirOf(v2))} (${sgn(v2)})` };
+        })(),
         ...(() => {
           const pb = cotPct[b], pq = cotPct[q], why = [];
           if (mod && v > 0) { if (pb >= 90) why.push(`${b} crowded long`); if (pq <= 10) why.push(`${q} crowded short`); }
@@ -503,7 +534,7 @@ class Component extends DCLogic {
         return {
           ...rv,
           ...this.cotVals(this.state.data?.cot ?? SAMPLE_COT),
-          ...this.pairBias(r.score, r.label),
+          ...this.pairBias(r.score, r.label, rv.otherScore, rv.otherName),
           ...(r.score > 0.3 ? {
             riskUsdHead: 'Mild headwind',
             riskUsdText: 'Investors move out of safe havens into higher-yielding assets. USD usually softens against AUD, NZD and CAD, but often firms against JPY and CHF, which fall harder.',
