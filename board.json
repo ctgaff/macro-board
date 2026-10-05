@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T04:34:38.463Z",
+  "updatedAt": "2026-10-05T05:22:08.059Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -158,6 +158,14 @@
     }
   ],
   "risk": {
+    "fast": {
+      "score": 0.11,
+      "label": "Mixed"
+    },
+    "slow": {
+      "score": -0.44,
+      "label": "Risk-off"
+    },
     "score": -0.44,
     "label": "Risk-off",
     "asOf": "Oct 01",
@@ -167,8 +175,10 @@
         "name": "VIX",
         "note": "Equity volatility",
         "value": "16.4",
-        "ref": "15.9",
-        "signal": -1,
+        "ref5": "15.9",
+        "ref20": "15.9",
+        "signalFast": 0,
+        "signalSlow": -1,
         "weight": 1
       },
       {
@@ -176,8 +186,10 @@
         "name": "High-yield spread",
         "note": "Credit stress",
         "value": "3.24%",
-        "ref": "2.80%",
-        "signal": -1,
+        "ref5": "3.08%",
+        "ref20": "2.80%",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
@@ -185,8 +197,10 @@
         "name": "S&P 500",
         "note": "Equities",
         "value": "7,723",
-        "ref": "7,670",
-        "signal": 1,
+        "ref5": "7,679",
+        "ref20": "7,670",
+        "signalFast": 1,
+        "signalSlow": 1,
         "weight": 1
       },
       {
@@ -194,17 +208,21 @@
         "name": "AUD/JPY",
         "note": "FX risk barometer",
         "value": "109.42",
-        "ref": "110.81",
-        "signal": -1,
+        "ref5": "109.77",
+        "ref20": "110.81",
+        "signalFast": 0,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "curve",
         "name": "10y–2y curve",
-        "note": "Change over 20 days",
+        "note": "Steepening = risk-on",
         "value": "0.45%",
-        "ref": "0.43%",
-        "signal": 0,
+        "ref5": "0.36%",
+        "ref20": "0.43%",
+        "signalFast": 1,
+        "signalSlow": 0,
         "weight": 0.5
       }
     ]
