@@ -2,10 +2,11 @@
 // manual.json for series without a free API. Node 20+. Requires FRED_API_KEY.
 import fs from 'node:fs/promises';
 
-const KEY = process.env.FRED_API_KEY;
+const KEY = (process.env.FRED_API_KEY || '').trim().replace(/^api_key=/i, '').replace(/^["']|["']$/g, '');
 const OUT = process.env.BOARD_OUT || 'board.json';
 const MANUAL = process.env.BOARD_MANUAL || 'manual.json';
 if (!KEY) { console.error('FRED_API_KEY is not set'); process.exit(1); }
+if (!/^[a-z0-9]{32}$/.test(KEY)) console.warn(`FRED_API_KEY looks malformed (length ${KEY.length}; expected 32 lowercase letters/digits).`);
 
 // units: lin = level, pch = % change, pc1 = % change YoY, chg = change. scale converts to board units.
 const SERIES = [
@@ -39,7 +40,11 @@ const readJson = async (p, d) => { try { return JSON.parse(await fs.readFile(p, 
 async function fred(path, params) {
   const q = new URLSearchParams({ ...params, api_key: KEY, file_type: 'json' });
   const r = await fetch(`https://api.stlouisfed.org/fred/${path}?${q}`);
-  if (!r.ok) throw new Error(`FRED ${path} ${params.series_id}: ${r.status}`);
+  if (!r.ok) {
+    let msg = '';
+    try { msg = (await r.json()).error_message || ''; } catch {}
+    throw new Error(`FRED ${path} ${params.series_id}: ${r.status}${msg ? ' — ' + msg : ''}`);
+  }
   return r.json();
 }
 
