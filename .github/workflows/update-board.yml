@@ -1,7 +1,7 @@
 name: Update macro board
 on:
   schedule:
-    - cron: '*/30 11-22 * * 1-5'   # every 30 min, weekdays, ~7am–6pm ET
+    - cron: '50 12-22 * * 1-5'   # hourly at :50, weekdays, ~7:50am–5:50pm CT
   workflow_dispatch:
 permissions:
   contents: write
