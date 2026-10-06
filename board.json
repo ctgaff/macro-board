@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T22:43:10.811Z",
+  "updatedAt": "2026-10-06T02:31:17.379Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -193,9 +193,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,723",
-        "ref5": "7,679",
-        "ref20": "7,670",
+        "value": "7,774",
+        "ref5": "7,697",
+        "ref20": "7,673",
         "signalFast": 1,
         "signalSlow": 1,
         "weight": 1
@@ -276,6 +276,13 @@
         "pct": 71
       }
     ]
+  },
+  "dxy": {
+    "value": 102.241,
+    "ema": 100.777,
+    "emaPrev": 100.135,
+    "trend": 1,
+    "asOf": "Oct 05"
   },
   "unmatched": [
     "FOMC Meeting Minutes"
