@@ -192,6 +192,22 @@ const upcoming = events
     forecast: e.forecast || '—', previous: e.previous || '—',
   }));
 
-const board = { updatedAt: now.toISOString(), indicators, upcoming: upcoming.length ? upcoming : prev.upcoming || [], risk, cot, unmatched, missingForecast };
+// DXY rebuilt from ICE's formula using ECB rates (Frankfurter), with a 20-day EMA trend.
+let dxy = prev.dxy || null;
+try {
+  const start = new Date(now - 120 * 864e5).toISOString().slice(0, 10);
+  const fx = await (await fetch(`https://api.frankfurter.dev/v1/${start}..?base=USD&symbols=EUR,JPY,GBP,CAD,SEK,CHF`)).json();
+  const series = Object.entries(fx.rates).sort(([a], [b]) => a.localeCompare(b)).map(([date, r]) => ({
+    date,
+    v: 50.14348112 * r.EUR ** 0.576 * r.JPY ** 0.136 * r.GBP ** 0.119 * r.CAD ** 0.091 * r.SEK ** 0.042 * r.CHF ** 0.036,
+  }));
+  const k = 2 / 21, emas = [];
+  series.forEach((p, i) => emas.push(i === 0 ? p.v : p.v * k + emas[i - 1] * (1 - k)));
+  const n = series.length - 1, value = series[n].v, ema = emas[n], emaPrev = emas[Math.max(0, n - 5)];
+  const trend = value > ema && ema > emaPrev ? 1 : value < ema && ema < emaPrev ? -1 : 0;
+  dxy = { value: round(value, 3), ema: round(ema, 3), emaPrev: round(emaPrev, 3), trend, asOf: fmtDay(series[n].date + 'T12:00:00Z') };
+} catch (e) { console.warn('DXY:', e.message); }
+
+const board = { updatedAt: now.toISOString(), indicators, upcoming: upcoming.length ? upcoming : prev.upcoming || [], risk, cot, dxy, unmatched, missingForecast };
 await fs.writeFile(OUT, JSON.stringify(board, null, 2) + '\n');
 console.log(`Wrote ${OUT}: ${Object.keys(indicators).length} indicators, ${board.upcoming.length} upcoming`);
