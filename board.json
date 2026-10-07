@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T22:50:31.606Z",
+  "updatedAt": "2026-10-07T01:50:23.853Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -193,9 +193,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,774",
-        "ref5": "7,697",
-        "ref20": "7,673",
+        "value": "7,819",
+        "ref5": "7,727",
+        "ref20": "7,680",
         "signalFast": 1,
         "signalSlow": 1,
         "weight": 1
