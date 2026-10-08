@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T23:51:37.224Z",
+  "updatedAt": "2026-10-08T19:01:18.540Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -60,13 +60,10 @@
     "claims": {
       "actual": 197,
       "forecast": 200,
-      "date": "Oct 01",
+      "date": "Oct 08",
       "src": "Dept. of Labor",
-      "period": "2026-09-26",
-      "pending": {
-        "forecast": 200,
-        "eventDate": "2026-10-08T08:30:00-04:00"
-      }
+      "period": "2026-10-03",
+      "pending": null
     },
     "adp": {
       "actual": 90,
@@ -114,22 +111,6 @@
   },
   "upcoming": [
     {
-      "date": "Oct 08",
-      "time": "04:30",
-      "name": "FOMC Member Waller Speaks",
-      "section": "Rates",
-      "forecast": "—",
-      "previous": "—"
-    },
-    {
-      "date": "Oct 08",
-      "time": "08:30",
-      "name": "Unemployment Claims",
-      "section": "Jobs",
-      "forecast": "200K",
-      "previous": "197K"
-    },
-    {
       "date": "Oct 09",
       "time": "10:00",
       "name": "Prelim UoM Consumer Sentiment",
@@ -148,7 +129,7 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.78,
+      "score": 0.33,
       "label": "Risk-on"
     },
     "slow": {
@@ -157,16 +138,16 @@
     },
     "score": 0.11,
     "label": "Mixed",
-    "asOf": "Oct 06",
+    "asOf": "Oct 07",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "15.0",
-        "ref5": "15.7",
-        "ref20": "15.9",
-        "signalFast": 1,
+        "value": "15.1",
+        "ref5": "15.5",
+        "ref20": "15.8",
+        "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
       },
@@ -174,10 +155,10 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.03%",
+        "value": "3.09%",
         "ref5": "3.12%",
-        "ref20": "2.86%",
-        "signalFast": 1,
+        "ref20": "2.88%",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -185,9 +166,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,819",
-        "ref5": "7,727",
-        "ref20": "7,680",
+        "value": "7,802",
+        "ref5": "7,757",
+        "ref20": "7,688",
         "signalFast": 1,
         "signalSlow": 1,
         "weight": 1
@@ -196,9 +177,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.99",
-        "ref5": "109.95",
-        "ref20": "110.65",
+        "value": "109.90",
+        "ref5": "109.96",
+        "ref20": "110.61",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
@@ -270,11 +251,11 @@
     ]
   },
   "dxy": {
-    "value": 102.409,
-    "ema": 101.022,
-    "emaPrev": 100.337,
+    "value": 102.358,
+    "ema": 101.149,
+    "emaPrev": 100.47,
     "trend": 1,
-    "asOf": "Oct 07"
+    "asOf": "Oct 08"
   },
   "unmatched": [
     "FOMC Meeting Minutes"
