@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T23:58:09.585Z",
+  "updatedAt": "2026-10-09T18:31:33.186Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -129,7 +129,7 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.22,
+      "score": -0.22,
       "label": "Mixed"
     },
     "slow": {
@@ -138,27 +138,27 @@
     },
     "score": 0.11,
     "label": "Mixed",
-    "asOf": "Oct 07",
+    "asOf": "Oct 08",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "15.1",
-        "ref5": "15.5",
-        "ref20": "15.8",
+        "value": "15.4",
+        "ref5": "15.3",
+        "ref20": "15.7",
         "signalFast": 0,
-        "signalSlow": 1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.09%",
-        "ref5": "3.12%",
-        "ref20": "2.88%",
-        "signalFast": 0,
+        "value": "3.15%",
+        "ref5": "3.10%",
+        "ref20": "2.90%",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -166,10 +166,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,802",
-        "ref5": "7,757",
-        "ref20": "7,688",
-        "signalFast": 1,
+        "value": "7,765",
+        "ref5": "7,777",
+        "ref20": "7,697",
+        "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
       },
@@ -177,11 +177,11 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.90",
-        "ref5": "109.96",
+        "value": "110.48",
+        "ref5": "110.18",
         "ref20": "110.61",
         "signalFast": 0,
-        "signalSlow": -1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
@@ -251,11 +251,11 @@
     ]
   },
   "dxy": {
-    "value": 102.358,
-    "ema": 101.149,
-    "emaPrev": 100.47,
+    "value": 102.185,
+    "ema": 101.248,
+    "emaPrev": 100.623,
     "trend": 1,
-    "asOf": "Oct 08"
+    "asOf": "Oct 09"
   },
   "unmatched": [
     "FOMC Meeting Minutes"
