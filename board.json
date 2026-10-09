@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T18:31:33.186Z",
+  "updatedAt": "2026-10-09T22:54:49.177Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -103,9 +103,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.77,
-      "forecast": 4.75,
-      "date": "Oct 07",
+      "actual": 4.75,
+      "forecast": 4.77,
+      "date": "Oct 08",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -188,9 +188,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.47%",
-        "ref5": "0.46%",
-        "ref20": "0.39%",
+        "value": "0.44%",
+        "ref5": "0.45%",
+        "ref20": "0.33%",
         "signalFast": 0,
         "signalSlow": 1,
         "weight": 0.5
@@ -198,54 +198,54 @@
     ]
   },
   "cot": {
-    "asOf": "Sep 29",
+    "asOf": "Oct 06",
     "ccys": [
       {
         "ccy": "NZD",
-        "net": -17315,
-        "chg": -5935,
-        "pct": 52
-      },
-      {
-        "ccy": "AUD",
-        "net": -63239,
-        "chg": -16425,
+        "net": -29346,
+        "chg": -12031,
         "pct": 38
       },
       {
+        "ccy": "AUD",
+        "net": -98588,
+        "chg": -35349,
+        "pct": 4
+      },
+      {
         "ccy": "EUR",
-        "net": -63256,
-        "chg": -10922,
-        "pct": 6
+        "net": -99332,
+        "chg": -36076,
+        "pct": 1
       },
       {
         "ccy": "GBP",
-        "net": -91075,
-        "chg": -8507,
-        "pct": 3
+        "net": -97611,
+        "chg": -6536,
+        "pct": 2
       },
       {
         "ccy": "JPY",
-        "net": 55440,
-        "chg": -16542,
-        "pct": 74
+        "net": 62325,
+        "chg": 6885,
+        "pct": 78
       },
       {
         "ccy": "CHF",
-        "net": -24617,
-        "chg": 2135,
-        "pct": 68
+        "net": -23740,
+        "chg": 877,
+        "pct": 71
       },
       {
         "ccy": "CAD",
-        "net": -78671,
-        "chg": -25461,
-        "pct": 54
+        "net": -90163,
+        "chg": -11492,
+        "pct": 48
       },
       {
         "ccy": "USD",
-        "net": 11881,
-        "chg": 1551,
+        "net": 12011,
+        "chg": 130,
         "pct": 71
       }
     ]
