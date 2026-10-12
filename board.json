@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T22:54:49.177Z",
+  "updatedAt": "2026-10-12T21:24:59.807Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -15,7 +15,10 @@
       "date": "Sep 28",
       "src": "Census Bureau",
       "period": "2026-08-01",
-      "pending": null
+      "pending": {
+        "forecast": 0.3,
+        "eventDate": "2026-10-15T08:30:00-04:00"
+      }
     },
     "cpi": {
       "actual": 3.397,
@@ -23,7 +26,10 @@
       "date": "Sep 11",
       "src": "BLS",
       "period": "2026-08-01",
-      "pending": null
+      "pending": {
+        "forecast": 3.6,
+        "eventDate": "2026-10-14T08:30:00-04:00"
+      }
     },
     "ppi": {
       "actual": 5.414,
@@ -63,7 +69,10 @@
       "date": "Oct 08",
       "src": "Dept. of Labor",
       "period": "2026-10-03",
-      "pending": null
+      "pending": {
+        "forecast": 195,
+        "eventDate": "2026-10-15T08:30:00-04:00"
+      }
     },
     "adp": {
       "actual": 90,
@@ -111,20 +120,68 @@
   },
   "upcoming": [
     {
-      "date": "Oct 09",
-      "time": "10:00",
-      "name": "Prelim UoM Consumer Sentiment",
-      "section": "Growth",
-      "forecast": "47.5",
-      "previous": "47.8"
+      "date": "Oct 14",
+      "time": "08:30",
+      "name": "Core CPI m/m",
+      "section": "Inflation",
+      "forecast": "0.2%",
+      "previous": "0.3%"
     },
     {
-      "date": "Oct 09",
-      "time": "10:00",
-      "name": "Prelim UoM Inflation Expectations",
+      "date": "Oct 14",
+      "time": "08:30",
+      "name": "Core CPI y/y",
       "section": "Inflation",
-      "forecast": "—",
-      "previous": "4.6%"
+      "forecast": "2.5%",
+      "previous": "2.4%"
+    },
+    {
+      "date": "Oct 14",
+      "time": "08:30",
+      "name": "CPI m/m",
+      "section": "Inflation",
+      "forecast": "0.6%",
+      "previous": "0.4%"
+    },
+    {
+      "date": "Oct 14",
+      "time": "08:30",
+      "name": "CPI y/y",
+      "section": "Inflation",
+      "forecast": "3.6%",
+      "previous": "3.4%"
+    },
+    {
+      "date": "Oct 15",
+      "time": "08:30",
+      "name": "Core PPI m/m",
+      "section": "Inflation",
+      "forecast": "0.3%",
+      "previous": "0.2%"
+    },
+    {
+      "date": "Oct 15",
+      "time": "08:30",
+      "name": "Core Retail Sales m/m",
+      "section": "Growth",
+      "forecast": "0.5%",
+      "previous": "1.4%"
+    },
+    {
+      "date": "Oct 15",
+      "time": "08:30",
+      "name": "PPI m/m",
+      "section": "Inflation",
+      "forecast": "0.5%",
+      "previous": "0.4%"
+    },
+    {
+      "date": "Oct 15",
+      "time": "08:30",
+      "name": "Retail Sales m/m",
+      "section": "Growth",
+      "forecast": "0.3%",
+      "previous": "1.2%"
     }
   ],
   "risk": {
@@ -133,22 +190,22 @@
       "label": "Mixed"
     },
     "slow": {
-      "score": 0.11,
-      "label": "Mixed"
+      "score": 0.33,
+      "label": "Risk-on"
     },
-    "score": 0.11,
-    "label": "Mixed",
-    "asOf": "Oct 08",
+    "score": 0.33,
+    "label": "Risk-on",
+    "asOf": "Oct 09",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "15.4",
-        "ref5": "15.3",
+        "value": "14.8",
+        "ref5": "15.2",
         "ref20": "15.7",
         "signalFast": 0,
-        "signalSlow": 0,
+        "signalSlow": 1,
         "weight": 1
       },
       {
@@ -166,9 +223,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,765",
-        "ref5": "7,777",
-        "ref20": "7,697",
+        "value": "7,812",
+        "ref5": "7,794",
+        "ref20": "7,705",
         "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
@@ -177,9 +234,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.48",
-        "ref5": "110.18",
-        "ref20": "110.61",
+        "value": "110.61",
+        "ref5": "110.27",
+        "ref20": "110.63",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -234,31 +291,37 @@
         "ccy": "CHF",
         "net": -23740,
         "chg": 877,
-        "pct": 71
+        "pct": 72
       },
       {
         "ccy": "CAD",
         "net": -90163,
         "chg": -11492,
-        "pct": 48
+        "pct": 49
       },
       {
         "ccy": "USD",
         "net": 12011,
         "chg": 130,
-        "pct": 71
+        "pct": 72
       }
     ]
   },
   "dxy": {
-    "value": 102.185,
-    "ema": 101.248,
-    "emaPrev": 100.623,
+    "value": 102.386,
+    "ema": 101.356,
+    "emaPrev": 100.777,
     "trend": 1,
-    "asOf": "Oct 09"
+    "asOf": "Oct 12"
   },
   "unmatched": [
-    "FOMC Meeting Minutes"
+    "Core CPI m/m",
+    "Core CPI y/y",
+    "CPI m/m",
+    "Core PPI m/m",
+    "Core Retail Sales m/m",
+    "PPI m/m",
+    "Fed Chairman Warsh Speaks"
   ],
   "missingForecast": []
 }
