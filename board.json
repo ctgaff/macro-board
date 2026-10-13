@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T21:24:59.807Z",
+  "updatedAt": "2026-10-13T02:43:17.555Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -70,7 +70,7 @@
       "src": "Dept. of Labor",
       "period": "2026-10-03",
       "pending": {
-        "forecast": 195,
+        "forecast": 199,
         "eventDate": "2026-10-15T08:30:00-04:00"
       }
     },
@@ -164,7 +164,7 @@
       "time": "08:30",
       "name": "Core Retail Sales m/m",
       "section": "Growth",
-      "forecast": "0.5%",
+      "forecast": "0.6%",
       "previous": "1.4%"
     },
     {
@@ -172,7 +172,7 @@
       "time": "08:30",
       "name": "PPI m/m",
       "section": "Inflation",
-      "forecast": "0.5%",
+      "forecast": "0.6%",
       "previous": "0.4%"
     },
     {
@@ -223,9 +223,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,812",
-        "ref5": "7,794",
-        "ref20": "7,705",
+        "value": "7,807",
+        "ref5": "7,801",
+        "ref20": "7,714",
         "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
