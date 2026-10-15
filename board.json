@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T00:07:46.468Z",
+  "updatedAt": "2026-10-15T17:22:37.885Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -10,15 +10,12 @@
       "pending": null
     },
     "retail": {
-      "actual": 1.127,
-      "forecast": 0.8,
-      "date": "Sep 28",
+      "actual": 0.771,
+      "forecast": 0.3,
+      "date": "Oct 15",
       "src": "Census Bureau",
-      "period": "2026-08-01",
-      "pending": {
-        "forecast": 0.3,
-        "eventDate": "2026-10-15T08:30:00-04:00"
-      }
+      "period": "2026-09-01",
+      "pending": null
     },
     "cpi": {
       "actual": 3.738,
@@ -29,11 +26,11 @@
       "pending": null
     },
     "ppi": {
-      "actual": 5.414,
+      "actual": 6.346,
       "forecast": 5.3,
-      "date": "Sep 10",
+      "date": "Oct 15",
       "src": "BLS",
-      "period": "2026-08-01",
+      "period": "2026-09-01",
       "pending": null
     },
     "pce": {
@@ -61,15 +58,12 @@
       "pending": null
     },
     "claims": {
-      "actual": 197,
-      "forecast": 200,
-      "date": "Oct 08",
+      "actual": 199,
+      "forecast": 199,
+      "date": "Oct 15",
       "src": "Dept. of Labor",
-      "period": "2026-10-03",
-      "pending": {
-        "forecast": 199,
-        "eventDate": "2026-10-15T08:30:00-04:00"
-      }
+      "period": "2026-10-10",
+      "pending": null
     },
     "adp": {
       "actual": 90,
@@ -118,54 +112,6 @@
   "upcoming": [
     {
       "date": "Oct 15",
-      "time": "08:30",
-      "name": "Core PPI m/m",
-      "section": "Inflation",
-      "forecast": "0.3%",
-      "previous": "0.2%"
-    },
-    {
-      "date": "Oct 15",
-      "time": "08:30",
-      "name": "Core Retail Sales m/m",
-      "section": "Growth",
-      "forecast": "0.6%",
-      "previous": "1.4%"
-    },
-    {
-      "date": "Oct 15",
-      "time": "08:30",
-      "name": "PPI m/m",
-      "section": "Inflation",
-      "forecast": "0.6%",
-      "previous": "0.4%"
-    },
-    {
-      "date": "Oct 15",
-      "time": "08:30",
-      "name": "Retail Sales m/m",
-      "section": "Growth",
-      "forecast": "0.3%",
-      "previous": "1.2%"
-    },
-    {
-      "date": "Oct 15",
-      "time": "08:30",
-      "name": "Philly Fed Manufacturing Index",
-      "section": "Rates",
-      "forecast": "28.2",
-      "previous": "37.8"
-    },
-    {
-      "date": "Oct 15",
-      "time": "08:30",
-      "name": "Unemployment Claims",
-      "section": "Jobs",
-      "forecast": "199K",
-      "previous": "197K"
-    },
-    {
-      "date": "Oct 15",
       "time": "23:30",
       "name": "Fed Chairman Warsh Speaks",
       "section": "Rates",
@@ -175,36 +121,36 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.11,
-      "label": "Mixed"
+      "score": -1,
+      "label": "Risk-off"
     },
     "slow": {
-      "score": -0.22,
-      "label": "Mixed"
+      "score": -0.67,
+      "label": "Risk-off"
     },
-    "score": -0.22,
-    "label": "Mixed",
-    "asOf": "Oct 13",
+    "score": -0.67,
+    "label": "Risk-off",
+    "asOf": "Oct 14",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "15.3",
-        "ref5": "15.2",
-        "ref20": "15.5",
-        "signalFast": 0,
-        "signalSlow": 0,
+        "value": "16.9",
+        "ref5": "15.5",
+        "ref20": "15.4",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.16%",
-        "ref5": "3.12%",
-        "ref20": "2.96%",
-        "signalFast": 0,
+        "value": "3.25%",
+        "ref5": "3.16%",
+        "ref20": "2.99%",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -223,11 +169,11 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "111.07",
-        "ref5": "110.48",
-        "ref20": "110.65",
-        "signalFast": 1,
-        "signalSlow": 0,
+        "value": "109.17",
+        "ref5": "110.33",
+        "ref20": "110.57",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
@@ -297,11 +243,11 @@
     ]
   },
   "dxy": {
-    "value": 102.225,
-    "ema": 101.517,
-    "emaPrev": 101.022,
+    "value": 102.113,
+    "ema": 101.574,
+    "emaPrev": 101.149,
     "trend": 1,
-    "asOf": "Oct 14"
+    "asOf": "Oct 15"
   },
   "unmatched": [
     "Core CPI m/m",
