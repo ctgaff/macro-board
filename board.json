@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T20:58:26.497Z",
+  "updatedAt": "2026-10-15T00:07:46.468Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -175,14 +175,14 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.11,
+      "score": -0.11,
       "label": "Mixed"
     },
     "slow": {
-      "score": 0.11,
+      "score": -0.22,
       "label": "Mixed"
     },
-    "score": 0.11,
+    "score": -0.22,
     "label": "Mixed",
     "asOf": "Oct 13",
     "gauges": [
@@ -212,11 +212,11 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,805",
-        "ref5": "7,798",
-        "ref20": "7,725",
-        "signalFast": 0,
-        "signalSlow": 1,
+        "value": "7,719",
+        "ref5": "7,782",
+        "ref20": "7,733",
+        "signalFast": -1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
@@ -234,11 +234,11 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.42%",
-        "ref5": "0.47%",
-        "ref20": "0.32%",
+        "value": "0.37%",
+        "ref5": "0.48%",
+        "ref20": "0.33%",
         "signalFast": -1,
-        "signalSlow": 1,
+        "signalSlow": 0,
         "weight": 0.5
       }
     ]
