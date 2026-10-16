@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T23:18:46.571Z",
+  "updatedAt": "2026-10-16T16:58:50.590Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -121,24 +121,24 @@
   ],
   "risk": {
     "fast": {
-      "score": -1,
-      "label": "Risk-off"
-    },
-    "slow": {
       "score": -0.56,
       "label": "Risk-off"
     },
-    "score": -0.56,
+    "slow": {
+      "score": -0.33,
+      "label": "Risk-off"
+    },
+    "score": -0.33,
     "label": "Risk-off",
-    "asOf": "Oct 14",
+    "asOf": "Oct 15",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "16.9",
-        "ref5": "15.5",
-        "ref20": "15.4",
+        "value": "16.5",
+        "ref5": "15.7",
+        "ref20": "15.5",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -147,9 +147,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.25%",
-        "ref5": "3.16%",
-        "ref20": "2.99%",
+        "value": "3.23%",
+        "ref5": "3.17%",
+        "ref20": "3.01%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -158,10 +158,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,719",
-        "ref5": "7,782",
-        "ref20": "7,733",
-        "signalFast": -1,
+        "value": "7,744",
+        "ref5": "7,777",
+        "ref20": "7,739",
+        "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
       },
@@ -169,11 +169,11 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.17",
-        "ref5": "110.33",
-        "ref20": "110.57",
-        "signalFast": -1,
-        "signalSlow": -1,
+        "value": "109.96",
+        "ref5": "110.23",
+        "ref20": "110.45",
+        "signalFast": 0,
+        "signalSlow": 0,
         "weight": 1
       },
       {
@@ -243,11 +243,11 @@
     ]
   },
   "dxy": {
-    "value": 102.113,
-    "ema": 101.574,
-    "emaPrev": 101.149,
+    "value": 101.714,
+    "ema": 101.588,
+    "emaPrev": 101.248,
     "trend": 1,
-    "asOf": "Oct 15"
+    "asOf": "Oct 16"
   },
   "unmatched": [
     "Core CPI m/m",
