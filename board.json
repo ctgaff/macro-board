@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T23:02:17.895Z",
+  "updatedAt": "2026-10-19T18:51:00.550Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -63,7 +63,10 @@
       "date": "Oct 15",
       "src": "Dept. of Labor",
       "period": "2026-10-10",
-      "pending": null
+      "pending": {
+        "forecast": 200,
+        "eventDate": "2026-10-22T08:30:00-04:00"
+      }
     },
     "adp": {
       "actual": 90,
@@ -111,34 +114,66 @@
   },
   "upcoming": [
     {
-      "date": "Oct 15",
-      "time": "23:30",
-      "name": "Fed Chairman Warsh Speaks",
-      "section": "Rates",
+      "date": "Oct 22",
+      "time": "08:30",
+      "name": "Unemployment Claims",
+      "section": "Jobs",
+      "forecast": "200K",
+      "previous": "199K"
+    },
+    {
+      "date": "Oct 23",
+      "time": "09:45",
+      "name": "Flash Manufacturing PMI",
+      "section": "Growth",
+      "forecast": "55.5",
+      "previous": "57.0"
+    },
+    {
+      "date": "Oct 23",
+      "time": "09:45",
+      "name": "Flash Services PMI",
+      "section": "Growth",
+      "forecast": "58.0",
+      "previous": "58.7"
+    },
+    {
+      "date": "Oct 23",
+      "time": "10:00",
+      "name": "Revised UoM Consumer Sentiment",
+      "section": "Growth",
+      "forecast": "46.3",
+      "previous": "46.3"
+    },
+    {
+      "date": "Oct 23",
+      "time": "10:00",
+      "name": "Revised UoM Inflation Expectations",
+      "section": "Inflation",
       "forecast": "—",
-      "previous": "—"
+      "previous": "4.7%"
     }
   ],
   "risk": {
     "fast": {
-      "score": -0.56,
+      "score": -0.78,
       "label": "Risk-off"
     },
     "slow": {
-      "score": -0.33,
+      "score": -0.56,
       "label": "Risk-off"
     },
-    "score": -0.33,
+    "score": -0.56,
     "label": "Risk-off",
-    "asOf": "Oct 15",
+    "asOf": "Oct 16",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "16.5",
-        "ref5": "15.7",
-        "ref20": "15.5",
+        "value": "20.0",
+        "ref5": "16.8",
+        "ref20": "15.7",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -147,9 +182,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.23%",
-        "ref5": "3.17%",
-        "ref20": "3.01%",
+        "value": "3.31%",
+        "ref5": "3.21%",
+        "ref20": "3.05%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -158,20 +193,20 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,744",
-        "ref5": "7,777",
+        "value": "7,659",
+        "ref5": "7,747",
         "ref20": "7,739",
-        "signalFast": 0,
-        "signalSlow": 0,
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.96",
-        "ref5": "110.23",
-        "ref20": "110.45",
+        "value": "110.55",
+        "ref5": "110.22",
+        "ref20": "110.36",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -232,7 +267,7 @@
         "ccy": "CAD",
         "net": -94765,
         "chg": -4602,
-        "pct": 45
+        "pct": 46
       },
       {
         "ccy": "USD",
@@ -243,20 +278,12 @@
     ]
   },
   "dxy": {
-    "value": 101.714,
-    "ema": 101.588,
-    "emaPrev": 101.248,
+    "value": 101.826,
+    "ema": 101.61,
+    "emaPrev": 101.356,
     "trend": 1,
-    "asOf": "Oct 16"
+    "asOf": "Oct 19"
   },
-  "unmatched": [
-    "Core CPI m/m",
-    "Core CPI y/y",
-    "CPI m/m",
-    "Core PPI m/m",
-    "Core Retail Sales m/m",
-    "PPI m/m",
-    "Fed Chairman Warsh Speaks"
-  ],
+  "unmatched": [],
   "missingForecast": []
 }
