@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T23:06:07.249Z",
+  "updatedAt": "2026-10-20T17:33:15.226Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -126,7 +126,7 @@
       "time": "09:45",
       "name": "Flash Manufacturing PMI",
       "section": "Growth",
-      "forecast": "55.5",
+      "forecast": "55.4",
       "previous": "57.0"
     },
     {
@@ -134,7 +134,7 @@
       "time": "09:45",
       "name": "Flash Services PMI",
       "section": "Growth",
-      "forecast": "58.0",
+      "forecast": "57.8",
       "previous": "58.7"
     },
     {
@@ -156,7 +156,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.78,
+      "score": -0.33,
       "label": "Risk-off"
     },
     "slow": {
@@ -165,15 +165,15 @@
     },
     "score": -0.56,
     "label": "Risk-off",
-    "asOf": "Oct 16",
+    "asOf": "Oct 19",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "20.0",
-        "ref5": "16.8",
-        "ref20": "15.7",
+        "value": "18.4",
+        "ref5": "17.4",
+        "ref20": "15.9",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -182,10 +182,10 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.31%",
-        "ref5": "3.21%",
-        "ref20": "3.05%",
-        "signalFast": -1,
+        "value": "3.29%",
+        "ref5": "3.25%",
+        "ref20": "3.08%",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -193,10 +193,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,659",
-        "ref5": "7,747",
-        "ref20": "7,739",
-        "signalFast": -1,
+        "value": "7,691",
+        "ref5": "7,724",
+        "ref20": "7,736",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -204,9 +204,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.55",
-        "ref5": "110.22",
-        "ref20": "110.36",
+        "value": "110.45",
+        "ref5": "110.24",
+        "ref20": "110.30",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -278,11 +278,11 @@
     ]
   },
   "dxy": {
-    "value": 101.826,
-    "ema": 101.61,
-    "emaPrev": 101.356,
+    "value": 101.844,
+    "ema": 101.632,
+    "emaPrev": 101.443,
     "trend": 1,
-    "asOf": "Oct 19"
+    "asOf": "Oct 20"
   },
   "unmatched": [],
   "missingForecast": []
