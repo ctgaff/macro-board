@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T00:09:15.884Z",
+  "updatedAt": "2026-10-21T17:40:46.924Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -278,11 +278,11 @@
     ]
   },
   "dxy": {
-    "value": 101.844,
-    "ema": 101.633,
-    "emaPrev": 101.443,
+    "value": 101.653,
+    "ema": 101.635,
+    "emaPrev": 101.518,
     "trend": 1,
-    "asOf": "Oct 20"
+    "asOf": "Oct 21"
   },
   "unmatched": [],
   "missingForecast": []
