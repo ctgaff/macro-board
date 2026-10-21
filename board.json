@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T20:54:06.650Z",
+  "updatedAt": "2026-10-21T00:09:15.884Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -215,9 +215,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.38%",
-        "ref5": "0.44%",
-        "ref20": "0.25%",
+        "value": "0.33%",
+        "ref5": "0.42%",
+        "ref20": "0.20%",
         "signalFast": -1,
         "signalSlow": 1,
         "weight": 0.5
@@ -279,7 +279,7 @@
   },
   "dxy": {
     "value": 101.844,
-    "ema": 101.632,
+    "ema": 101.633,
     "emaPrev": 101.443,
     "trend": 1,
     "asOf": "Oct 20"
