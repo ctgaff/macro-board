@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T17:39:10.970Z",
+  "updatedAt": "2026-10-22T20:50:02.435Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -103,9 +103,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.79,
+      "actual": 4.81,
       "forecast": 4.81,
-      "date": "Oct 20",
+      "date": "Oct 21",
       "src": "Treasury · vs 21-day avg"
     }
   },
