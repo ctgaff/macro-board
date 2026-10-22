@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T00:15:14.763Z",
+  "updatedAt": "2026-10-22T17:39:10.970Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -58,15 +58,12 @@
       "pending": null
     },
     "claims": {
-      "actual": 199,
-      "forecast": 199,
-      "date": "Oct 15",
+      "actual": 194,
+      "forecast": 200,
+      "date": "Oct 22",
       "src": "Dept. of Labor",
-      "period": "2026-10-10",
-      "pending": {
-        "forecast": 200,
-        "eventDate": "2026-10-22T08:30:00-04:00"
-      }
+      "period": "2026-10-17",
+      "pending": null
     },
     "adp": {
       "actual": 90,
@@ -106,21 +103,13 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.77,
-      "forecast": 4.8,
-      "date": "Oct 19",
+      "actual": 4.79,
+      "forecast": 4.81,
+      "date": "Oct 20",
       "src": "Treasury · vs 21-day avg"
     }
   },
   "upcoming": [
-    {
-      "date": "Oct 22",
-      "time": "08:30",
-      "name": "Unemployment Claims",
-      "section": "Jobs",
-      "forecast": "200K",
-      "previous": "199K"
-    },
     {
       "date": "Oct 23",
       "time": "09:45",
@@ -156,25 +145,25 @@
   ],
   "risk": {
     "fast": {
+      "score": 0.33,
+      "label": "Risk-on"
+    },
+    "slow": {
       "score": -0.33,
       "label": "Risk-off"
     },
-    "slow": {
-      "score": -0.56,
-      "label": "Risk-off"
-    },
-    "score": -0.56,
+    "score": -0.33,
     "label": "Risk-off",
-    "asOf": "Oct 19",
+    "asOf": "Oct 21",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "18.4",
-        "ref5": "17.4",
-        "ref20": "15.9",
-        "signalFast": -1,
+        "value": "16.7",
+        "ref5": "17.8",
+        "ref20": "16.1",
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -182,9 +171,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.29%",
-        "ref5": "3.25%",
-        "ref20": "3.08%",
+        "value": "3.27%",
+        "ref5": "3.29%",
+        "ref20": "3.14%",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
@@ -193,20 +182,20 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,691",
-        "ref5": "7,724",
-        "ref20": "7,736",
-        "signalFast": 0,
-        "signalSlow": -1,
+        "value": "7,757",
+        "ref5": "7,713",
+        "ref20": "7,735",
+        "signalFast": 1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.45",
-        "ref5": "110.24",
-        "ref20": "110.30",
+        "value": "110.12",
+        "ref5": "110.43",
+        "ref20": "110.19",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -215,9 +204,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.33%",
-        "ref5": "0.42%",
-        "ref20": "0.20%",
+        "value": "0.32%",
+        "ref5": "0.37%",
+        "ref20": "0.25%",
         "signalFast": -1,
         "signalSlow": 1,
         "weight": 0.5
@@ -278,11 +267,11 @@
     ]
   },
   "dxy": {
-    "value": 101.653,
-    "ema": 101.635,
-    "emaPrev": 101.518,
+    "value": 101.756,
+    "ema": 101.646,
+    "emaPrev": 101.574,
     "trend": 1,
-    "asOf": "Oct 21"
+    "asOf": "Oct 22"
   },
   "unmatched": [],
   "missingForecast": []
