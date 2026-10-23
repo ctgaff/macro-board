@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T17:28:37.749Z",
+  "updatedAt": "2026-10-23T20:39:50.980Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -103,9 +103,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.81,
+      "actual": 4.65,
       "forecast": 4.81,
-      "date": "Oct 21",
+      "date": "Oct 22",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -214,55 +214,55 @@
     ]
   },
   "cot": {
-    "asOf": "Oct 13",
+    "asOf": "Oct 20",
     "ccys": [
       {
         "ccy": "NZD",
-        "net": -47001,
-        "chg": -17655,
-        "pct": 18
+        "net": -58149,
+        "chg": -11148,
+        "pct": 3
       },
       {
         "ccy": "AUD",
-        "net": -117299,
-        "chg": -18711,
+        "net": -127292,
+        "chg": -9993,
         "pct": 1
       },
       {
         "ccy": "EUR",
-        "net": -137573,
-        "chg": -38241,
+        "net": -134524,
+        "chg": 3049,
         "pct": 1
       },
       {
         "ccy": "GBP",
-        "net": -106964,
-        "chg": -9353,
-        "pct": 1
+        "net": -80420,
+        "chg": 26544,
+        "pct": 7
       },
       {
         "ccy": "JPY",
-        "net": 50207,
-        "chg": -12118,
-        "pct": 71
+        "net": 69878,
+        "chg": 19671,
+        "pct": 79
       },
       {
         "ccy": "CHF",
-        "net": -22078,
-        "chg": 1662,
-        "pct": 78
+        "net": -18150,
+        "chg": 3928,
+        "pct": 88
       },
       {
         "ccy": "CAD",
-        "net": -94765,
-        "chg": -4602,
-        "pct": 46
+        "net": -74709,
+        "chg": 20056,
+        "pct": 58
       },
       {
         "ccy": "USD",
-        "net": 12919,
-        "chg": 908,
-        "pct": 73
+        "net": 15044,
+        "chg": 2125,
+        "pct": 79
       }
     ]
   },
