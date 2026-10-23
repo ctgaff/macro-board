@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T20:39:50.980Z",
+  "updatedAt": "2026-10-23T23:32:49.405Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -145,8 +145,8 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.22,
-      "label": "Mixed"
+      "score": -0.33,
+      "label": "Risk-off"
     },
     "slow": {
       "score": -0.44,
@@ -205,9 +205,9 @@
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
         "value": "0.31%",
-        "ref5": "0.33%",
-        "ref20": "0.26%",
-        "signalFast": 0,
+        "ref5": "0.35%",
+        "ref20": "0.31%",
+        "signalFast": -1,
         "signalSlow": 0,
         "weight": 0.5
       }
