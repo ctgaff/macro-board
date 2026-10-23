@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T23:40:05.853Z",
+  "updatedAt": "2026-10-23T17:28:37.749Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -145,8 +145,8 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.44,
-      "label": "Risk-on"
+      "score": -0.22,
+      "label": "Mixed"
     },
     "slow": {
       "score": -0.44,
@@ -154,16 +154,16 @@
     },
     "score": -0.44,
     "label": "Risk-off",
-    "asOf": "Oct 21",
+    "asOf": "Oct 22",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "16.7",
-        "ref5": "17.8",
-        "ref20": "16.1",
-        "signalFast": 1,
+        "value": "19.0",
+        "ref5": "18.3",
+        "ref20": "16.3",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -171,10 +171,10 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.27%",
-        "ref5": "3.29%",
-        "ref20": "3.14%",
-        "signalFast": 0,
+        "value": "3.40%",
+        "ref5": "3.32%",
+        "ref20": "3.17%",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -193,9 +193,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.12",
-        "ref5": "110.43",
-        "ref20": "110.19",
+        "value": "110.11",
+        "ref5": "110.46",
+        "ref20": "110.16",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -267,11 +267,11 @@
     ]
   },
   "dxy": {
-    "value": 101.756,
-    "ema": 101.646,
-    "emaPrev": 101.574,
+    "value": 101.8,
+    "ema": 101.661,
+    "emaPrev": 101.588,
     "trend": 1,
-    "asOf": "Oct 22"
+    "asOf": "Oct 23"
   },
   "unmatched": [],
   "missingForecast": []
