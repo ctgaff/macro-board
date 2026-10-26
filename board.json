@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T23:32:49.405Z",
+  "updatedAt": "2026-10-26T18:52:08.954Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -7,7 +7,10 @@
       "date": "Sep 30",
       "src": "BEA",
       "period": "2026-04-01",
-      "pending": null
+      "pending": {
+        "forecast": 3.2,
+        "eventDate": "2026-10-29T08:30:00-04:00"
+      }
     },
     "retail": {
       "actual": 0.771,
@@ -63,7 +66,10 @@
       "date": "Oct 22",
       "src": "Dept. of Labor",
       "period": "2026-10-17",
-      "pending": null
+      "pending": {
+        "forecast": 198,
+        "eventDate": "2026-10-29T08:30:00-04:00"
+      }
     },
     "adp": {
       "actual": 90,
@@ -100,7 +106,10 @@
       "forecast": 89.2,
       "date": "Sep 29",
       "src": "Conference Board",
-      "pending": null
+      "pending": {
+        "forecast": 80.7,
+        "eventDate": "2026-10-27T10:00:00-04:00"
+      }
     },
     "y2": {
       "actual": 4.65,
@@ -111,58 +120,90 @@
   },
   "upcoming": [
     {
-      "date": "Oct 23",
-      "time": "09:45",
-      "name": "Flash Manufacturing PMI",
-      "section": "Growth",
-      "forecast": "55.4",
-      "previous": "57.0"
-    },
-    {
-      "date": "Oct 23",
-      "time": "09:45",
-      "name": "Flash Services PMI",
-      "section": "Growth",
-      "forecast": "57.9",
-      "previous": "58.7"
-    },
-    {
-      "date": "Oct 23",
+      "date": "Oct 27",
       "time": "10:00",
-      "name": "Revised UoM Consumer Sentiment",
+      "name": "CB Consumer Confidence",
       "section": "Growth",
-      "forecast": "46.3",
-      "previous": "46.3"
+      "forecast": "80.7",
+      "previous": "81.9"
     },
     {
-      "date": "Oct 23",
-      "time": "10:00",
-      "name": "Revised UoM Inflation Expectations",
-      "section": "Inflation",
+      "date": "Oct 28",
+      "time": "14:00",
+      "name": "Federal Funds Rate",
+      "section": "Rates",
+      "forecast": "4.00%",
+      "previous": "4.00%"
+    },
+    {
+      "date": "Oct 28",
+      "time": "14:00",
+      "name": "FOMC Statement",
+      "section": "Rates",
       "forecast": "—",
-      "previous": "4.7%"
+      "previous": "—"
+    },
+    {
+      "date": "Oct 28",
+      "time": "14:30",
+      "name": "FOMC Press Conference",
+      "section": "Rates",
+      "forecast": "—",
+      "previous": "—"
+    },
+    {
+      "date": "Oct 29",
+      "time": "08:30",
+      "name": "Advance GDP q/q",
+      "section": "Growth",
+      "forecast": "3.2%",
+      "previous": "1.5%"
+    },
+    {
+      "date": "Oct 29",
+      "time": "08:30",
+      "name": "Core PCE Price Index m/m",
+      "section": "Inflation",
+      "forecast": "0.3%",
+      "previous": "0.2%"
+    },
+    {
+      "date": "Oct 29",
+      "time": "08:30",
+      "name": "Advance GDP Price Index q/q",
+      "section": "Growth",
+      "forecast": "3.5%",
+      "previous": "6.2%"
+    },
+    {
+      "date": "Oct 29",
+      "time": "08:30",
+      "name": "Unemployment Claims",
+      "section": "Jobs",
+      "forecast": "198K",
+      "previous": "194K"
     }
   ],
   "risk": {
     "fast": {
-      "score": -0.33,
+      "score": -0.56,
       "label": "Risk-off"
     },
     "slow": {
-      "score": -0.44,
+      "score": -0.67,
       "label": "Risk-off"
     },
-    "score": -0.44,
+    "score": -0.67,
     "label": "Risk-off",
-    "asOf": "Oct 22",
+    "asOf": "Oct 23",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "19.0",
-        "ref5": "18.3",
-        "ref20": "16.3",
+        "value": "19.4",
+        "ref5": "18.2",
+        "ref20": "16.5",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -171,10 +212,10 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.40%",
-        "ref5": "3.32%",
-        "ref20": "3.17%",
-        "signalFast": -1,
+        "value": "3.38%",
+        "ref5": "3.33%",
+        "ref20": "3.19%",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -182,20 +223,20 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,757",
-        "ref5": "7,713",
-        "ref20": "7,735",
-        "signalFast": 1,
-        "signalSlow": 0,
+        "value": "7,624",
+        "ref5": "7,690",
+        "ref20": "7,727",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.11",
-        "ref5": "110.46",
-        "ref20": "110.16",
+        "value": "110.60",
+        "ref5": "110.47",
+        "ref20": "110.18",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -267,12 +308,17 @@
     ]
   },
   "dxy": {
-    "value": 101.8,
-    "ema": 101.661,
-    "emaPrev": 101.588,
+    "value": 101.937,
+    "ema": 101.687,
+    "emaPrev": 101.61,
     "trend": 1,
-    "asOf": "Oct 23"
+    "asOf": "Oct 26"
   },
-  "unmatched": [],
+  "unmatched": [
+    "Federal Funds Rate",
+    "FOMC Statement",
+    "FOMC Press Conference",
+    "Core PCE Price Index m/m"
+  ],
   "missingForecast": []
 }
