@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T23:22:19.830Z",
+  "updatedAt": "2026-10-27T18:19:38.827Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -103,13 +103,10 @@
     },
     "conf": {
       "actual": 81.9,
-      "forecast": 89.2,
+      "forecast": 81.2,
       "date": "Sep 29",
       "src": "Conference Board",
-      "pending": {
-        "forecast": 81.2,
-        "eventDate": "2026-10-27T10:00:00-04:00"
-      }
+      "pending": null
     },
     "y2": {
       "actual": 4.69,
@@ -119,14 +116,6 @@
     }
   },
   "upcoming": [
-    {
-      "date": "Oct 27",
-      "time": "10:00",
-      "name": "CB Consumer Confidence",
-      "section": "Growth",
-      "forecast": "81.2",
-      "previous": "81.9"
-    },
     {
       "date": "Oct 28",
       "time": "14:00",
@@ -182,29 +171,37 @@
       "section": "Jobs",
       "forecast": "198K",
       "previous": "194K"
+    },
+    {
+      "date": "Oct 30",
+      "time": "08:30",
+      "name": "Employment Cost Index q/q",
+      "section": "Jobs",
+      "forecast": "0.8%",
+      "previous": "0.9%"
     }
   ],
   "risk": {
     "fast": {
-      "score": -0.56,
-      "label": "Risk-off"
+      "score": -0.11,
+      "label": "Mixed"
     },
     "slow": {
-      "score": -0.67,
+      "score": -0.44,
       "label": "Risk-off"
     },
-    "score": -0.67,
+    "score": -0.44,
     "label": "Risk-off",
-    "asOf": "Oct 23",
+    "asOf": "Oct 26",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "19.4",
+        "value": "18.4",
         "ref5": "18.2",
-        "ref20": "16.5",
-        "signalFast": -1,
+        "ref20": "16.7",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -212,9 +209,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.38%",
-        "ref5": "3.33%",
-        "ref20": "3.19%",
+        "value": "3.30%",
+        "ref5": "3.34%",
+        "ref20": "3.20%",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
@@ -223,10 +220,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,624",
-        "ref5": "7,690",
+        "value": "7,677",
+        "ref5": "7,687",
         "ref20": "7,727",
-        "signalFast": -1,
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -234,11 +231,11 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.60",
-        "ref5": "110.47",
-        "ref20": "110.18",
+        "value": "110.98",
+        "ref5": "110.57",
+        "ref20": "110.23",
         "signalFast": 0,
-        "signalSlow": 0,
+        "signalSlow": 1,
         "weight": 1
       },
       {
@@ -308,11 +305,11 @@
     ]
   },
   "dxy": {
-    "value": 101.937,
-    "ema": 101.687,
-    "emaPrev": 101.61,
+    "value": 102.187,
+    "ema": 101.735,
+    "emaPrev": 101.633,
     "trend": 1,
-    "asOf": "Oct 26"
+    "asOf": "Oct 27"
   },
   "unmatched": [
     "Federal Funds Rate",
