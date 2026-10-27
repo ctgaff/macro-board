@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T18:19:38.827Z",
+  "updatedAt": "2026-10-27T22:38:02.507Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -109,9 +109,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.69,
-      "forecast": 4.8,
-      "date": "Oct 23",
+      "actual": 4.68,
+      "forecast": 4.79,
+      "date": "Oct 26",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -242,9 +242,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.32%",
-        "ref5": "0.38%",
-        "ref20": "0.36%",
+        "value": "0.29%",
+        "ref5": "0.33%",
+        "ref20": "0.32%",
         "signalFast": -1,
         "signalSlow": 0,
         "weight": 0.5
