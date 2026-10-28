@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T18:30:49.936Z",
+  "updatedAt": "2026-10-28T22:52:49.663Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -109,9 +109,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.68,
-      "forecast": 4.79,
-      "date": "Oct 26",
+      "actual": 4.7,
+      "forecast": 4.78,
+      "date": "Oct 27",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -159,25 +159,25 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.11,
-      "label": "Mixed"
+      "score": 0.56,
+      "label": "Risk-on"
     },
     "slow": {
-      "score": -0.22,
+      "score": 0,
       "label": "Mixed"
     },
-    "score": -0.22,
+    "score": 0,
     "label": "Mixed",
-    "asOf": "Oct 26",
+    "asOf": "Oct 27",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "18.4",
+        "value": "17.5",
         "ref5": "18.2",
         "ref20": "16.7",
-        "signalFast": 0,
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -185,11 +185,11 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.30%",
-        "ref5": "3.34%",
-        "ref20": "3.20%",
-        "signalFast": 0,
-        "signalSlow": -1,
+        "value": "3.18%",
+        "ref5": "3.31%",
+        "ref20": "3.21%",
+        "signalFast": 1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
@@ -207,9 +207,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.98",
-        "ref5": "110.57",
-        "ref20": "110.23",
+        "value": "111.09",
+        "ref5": "110.58",
+        "ref20": "110.31",
         "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
@@ -218,10 +218,10 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.29%",
-        "ref5": "0.33%",
-        "ref20": "0.32%",
-        "signalFast": -1,
+        "value": "0.38%",
+        "ref5": "0.32%",
+        "ref20": "0.37%",
+        "signalFast": 1,
         "signalSlow": 0,
         "weight": 0.5
       }
