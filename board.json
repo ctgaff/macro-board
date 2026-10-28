@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T22:38:02.507Z",
+  "updatedAt": "2026-10-28T01:44:43.113Z",
   "indicators": {
     "gdp": {
       "actual": 2.2,
@@ -187,11 +187,11 @@
       "label": "Mixed"
     },
     "slow": {
-      "score": -0.44,
-      "label": "Risk-off"
+      "score": -0.22,
+      "label": "Mixed"
     },
-    "score": -0.44,
-    "label": "Risk-off",
+    "score": -0.22,
+    "label": "Mixed",
     "asOf": "Oct 26",
     "gauges": [
       {
@@ -220,11 +220,11 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,677",
-        "ref5": "7,687",
-        "ref20": "7,727",
+        "value": "7,723",
+        "ref5": "7,689",
+        "ref20": "7,730",
         "signalFast": 0,
-        "signalSlow": -1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
