@@ -1,16 +1,13 @@
 {
-  "updatedAt": "2026-10-28T22:52:49.663Z",
+  "updatedAt": "2026-10-29T18:39:30.616Z",
   "indicators": {
     "gdp": {
-      "actual": 2.2,
-      "forecast": 1.5,
-      "date": "Sep 30",
+      "actual": 3.4,
+      "forecast": 3.2,
+      "date": "Oct 29",
       "src": "BEA",
-      "period": "2026-04-01",
-      "pending": {
-        "forecast": 3.2,
-        "eventDate": "2026-10-29T08:30:00-04:00"
-      }
+      "period": "2026-07-01",
+      "pending": null
     },
     "retail": {
       "actual": 0.771,
@@ -37,11 +34,11 @@
       "pending": null
     },
     "pce": {
-      "actual": 3.419,
+      "actual": 3.649,
       "forecast": 3.3,
-      "date": "Sep 30",
+      "date": "Oct 29",
       "src": "BEA",
-      "period": "2026-08-01",
+      "period": "2026-09-01",
       "pending": null
     },
     "nfp": {
@@ -62,14 +59,11 @@
     },
     "claims": {
       "actual": 194,
-      "forecast": 200,
-      "date": "Oct 22",
+      "forecast": 198,
+      "date": "Oct 29",
       "src": "Dept. of Labor",
-      "period": "2026-10-17",
-      "pending": {
-        "forecast": 198,
-        "eventDate": "2026-10-29T08:30:00-04:00"
-      }
+      "period": "2026-10-24",
+      "pending": null
     },
     "adp": {
       "actual": 90,
@@ -117,38 +111,6 @@
   },
   "upcoming": [
     {
-      "date": "Oct 29",
-      "time": "08:30",
-      "name": "Advance GDP q/q",
-      "section": "Growth",
-      "forecast": "3.2%",
-      "previous": "1.5%"
-    },
-    {
-      "date": "Oct 29",
-      "time": "08:30",
-      "name": "Core PCE Price Index m/m",
-      "section": "Inflation",
-      "forecast": "0.3%",
-      "previous": "0.2%"
-    },
-    {
-      "date": "Oct 29",
-      "time": "08:30",
-      "name": "Advance GDP Price Index q/q",
-      "section": "Growth",
-      "forecast": "3.2%",
-      "previous": "6.2%"
-    },
-    {
-      "date": "Oct 29",
-      "time": "08:30",
-      "name": "Unemployment Claims",
-      "section": "Jobs",
-      "forecast": "198K",
-      "previous": "194K"
-    },
-    {
       "date": "Oct 30",
       "time": "08:30",
       "name": "Employment Cost Index q/q",
@@ -159,47 +121,47 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.56,
+      "score": 0.78,
       "label": "Risk-on"
     },
     "slow": {
-      "score": 0,
-      "label": "Mixed"
+      "score": 0.44,
+      "label": "Risk-on"
     },
-    "score": 0,
-    "label": "Mixed",
-    "asOf": "Oct 27",
+    "score": 0.44,
+    "label": "Risk-on",
+    "asOf": "Oct 28",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "17.5",
-        "ref5": "18.2",
-        "ref20": "16.7",
+        "value": "16.9",
+        "ref5": "18.3",
+        "ref20": "16.8",
         "signalFast": 1,
-        "signalSlow": -1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.18%",
-        "ref5": "3.31%",
+        "value": "3.14%",
+        "ref5": "3.28%",
         "ref20": "3.21%",
         "signalFast": 1,
-        "signalSlow": 0,
+        "signalSlow": 1,
         "weight": 1
       },
       {
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,723",
-        "ref5": "7,689",
-        "ref20": "7,730",
-        "signalFast": 0,
+        "value": "7,744",
+        "ref5": "7,686",
+        "ref20": "7,734",
+        "signalFast": 1,
         "signalSlow": 0,
         "weight": 1
       },
@@ -207,9 +169,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "111.09",
-        "ref5": "110.58",
-        "ref20": "110.31",
+        "value": "111.05",
+        "ref5": "110.77",
+        "ref20": "110.37",
         "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
@@ -281,11 +243,11 @@
     ]
   },
   "dxy": {
-    "value": 102.348,
-    "ema": 101.793,
-    "emaPrev": 101.635,
+    "value": 102.282,
+    "ema": 101.84,
+    "emaPrev": 101.646,
     "trend": 1,
-    "asOf": "Oct 28"
+    "asOf": "Oct 29"
   },
   "unmatched": [
     "Federal Funds Rate",
