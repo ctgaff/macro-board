@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T01:51:11.719Z",
+  "updatedAt": "2026-11-02T21:56:42.420Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -47,7 +47,10 @@
       "date": "Oct 02",
       "src": "BLS",
       "period": "2026-09-01",
-      "pending": null
+      "pending": {
+        "forecast": 65,
+        "eventDate": "2026-11-06T08:30:00-05:00"
+      }
     },
     "unemp": {
       "actual": 4.2,
@@ -55,7 +58,10 @@
       "date": "Oct 02",
       "src": "BLS",
       "period": "2026-09-01",
-      "pending": null
+      "pending": {
+        "forecast": 4.2,
+        "eventDate": "2026-11-06T08:30:00-05:00"
+      }
     },
     "claims": {
       "actual": 194,
@@ -63,7 +69,10 @@
       "date": "Oct 29",
       "src": "Dept. of Labor",
       "period": "2026-10-24",
-      "pending": null
+      "pending": {
+        "forecast": 197,
+        "eventDate": "2026-11-05T08:30:00-05:00"
+      }
     },
     "adp": {
       "actual": 90,
@@ -71,7 +80,10 @@
       "date": "Sep 30",
       "src": "ADP",
       "period": "2026-09-01",
-      "pending": null
+      "pending": {
+        "forecast": 67,
+        "eventDate": "2026-11-04T08:15:00-05:00"
+      }
     },
     "jolts": {
       "actual": 7.079,
@@ -79,11 +91,14 @@
       "date": "Sep 29",
       "src": "BLS",
       "period": "2026-08-01",
-      "pending": null
+      "pending": {
+        "forecast": 7.15,
+        "eventDate": "2026-11-03T10:00:00-05:00"
+      }
     },
     "mpmi": {
       "actual": 54.5,
-      "forecast": 54.8,
+      "forecast": 54.5,
       "date": "Oct 01",
       "src": "ISM",
       "pending": null
@@ -93,7 +108,10 @@
       "forecast": 55.1,
       "date": "Sep 03",
       "src": "ISM",
-      "pending": null
+      "pending": {
+        "forecast": 54.8,
+        "eventDate": "2026-11-04T10:00:00-05:00"
+      }
     },
     "conf": {
       "actual": 81.9,
@@ -103,54 +121,110 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.61,
-      "forecast": 4.76,
-      "date": "Oct 29",
+      "actual": 4.56,
+      "forecast": 4.74,
+      "date": "Oct 30",
       "src": "Treasury · vs 21-day avg"
     }
   },
   "upcoming": [
     {
-      "date": "Oct 30",
-      "time": "08:30",
-      "name": "Employment Cost Index q/q",
+      "date": "Nov 03",
+      "time": "10:00",
+      "name": "JOLTS Job Openings",
       "section": "Jobs",
-      "forecast": "0.8%",
-      "previous": "0.9%"
+      "forecast": "7.15M",
+      "previous": "7.08M"
+    },
+    {
+      "date": "Nov 03",
+      "time": "10:16",
+      "name": "Congressional Elections",
+      "section": "Other",
+      "forecast": "—",
+      "previous": "—"
+    },
+    {
+      "date": "Nov 04",
+      "time": "10:00",
+      "name": "ISM Services PMI",
+      "section": "Growth",
+      "forecast": "54.8",
+      "previous": "54.9"
+    },
+    {
+      "date": "Nov 05",
+      "time": "08:30",
+      "name": "Unemployment Claims",
+      "section": "Jobs",
+      "forecast": "197K",
+      "previous": "194K"
+    },
+    {
+      "date": "Nov 06",
+      "time": "08:30",
+      "name": "Average Hourly Earnings m/m",
+      "section": "Jobs",
+      "forecast": "0.3%",
+      "previous": "0.1%"
+    },
+    {
+      "date": "Nov 06",
+      "time": "08:30",
+      "name": "Non-Farm Employment Change",
+      "section": "Jobs",
+      "forecast": "65K",
+      "previous": "29K"
+    },
+    {
+      "date": "Nov 06",
+      "time": "08:30",
+      "name": "Unemployment Rate",
+      "section": "Jobs",
+      "forecast": "4.2%",
+      "previous": "4.2%"
+    },
+    {
+      "date": "Nov 06",
+      "time": "10:00",
+      "name": "Prelim UoM Consumer Sentiment",
+      "section": "Growth",
+      "forecast": "48.1",
+      "previous": "46.3"
     }
   ],
   "risk": {
     "fast": {
-      "score": 0.56,
-      "label": "Risk-on"
-    },
-    "slow": {
-      "score": -0.33,
+      "score": -0.56,
       "label": "Risk-off"
     },
-    "score": -0.33,
+    "slow": {
+      "score": -0.78,
+      "label": "Risk-off"
+    },
+    "score": -0.78,
     "label": "Risk-off",
-    "asOf": "Oct 29",
+    "asOf": "Oct 30",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "17.2",
+        "value": "19.4",
         "ref5": "17.9",
-        "ref20": "16.8",
-        "signalFast": 1,
-        "signalSlow": 0,
+        "ref20": "17.0",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.26%",
-        "ref5": "3.25%",
-        "ref20": "3.21%",
-        "signalFast": 0,
+        "value": "3.44%",
+        "ref5": "3.26%",
+        "ref20": "3.23%",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -158,20 +232,20 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,744",
-        "ref5": "7,686",
-        "ref20": "7,734",
-        "signalFast": 1,
-        "signalSlow": 0,
+        "value": "7,580",
+        "ref5": "7,689",
+        "ref20": "7,730",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.46",
-        "ref5": "110.84",
-        "ref20": "110.42",
+        "value": "110.66",
+        "ref5": "110.85",
+        "ref20": "110.45",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -243,17 +317,15 @@
     ]
   },
   "dxy": {
-    "value": 101.847,
-    "ema": 101.84,
-    "emaPrev": 101.661,
-    "trend": 1,
-    "asOf": "Oct 30"
+    "value": 101.615,
+    "ema": 101.819,
+    "emaPrev": 101.687,
+    "trend": 0,
+    "asOf": "Nov 02"
   },
   "unmatched": [
-    "Federal Funds Rate",
-    "FOMC Statement",
-    "FOMC Press Conference",
-    "Core PCE Price Index m/m"
+    "Congressional Elections",
+    "Average Hourly Earnings m/m"
   ],
   "missingForecast": []
 }
