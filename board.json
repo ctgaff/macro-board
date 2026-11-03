@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T03:43:31.529Z",
+  "updatedAt": "2026-11-03T19:50:05.751Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -86,15 +86,12 @@
       }
     },
     "jolts": {
-      "actual": 7.079,
-      "forecast": 7.23,
-      "date": "Sep 29",
+      "actual": 7.523,
+      "forecast": 7.15,
+      "date": "Nov 03",
       "src": "BLS",
-      "period": "2026-08-01",
-      "pending": {
-        "forecast": 7.15,
-        "eventDate": "2026-11-03T10:00:00-05:00"
-      }
+      "period": "2026-09-01",
+      "pending": null
     },
     "mpmi": {
       "actual": 54.5,
@@ -128,22 +125,6 @@
     }
   },
   "upcoming": [
-    {
-      "date": "Nov 03",
-      "time": "10:00",
-      "name": "JOLTS Job Openings",
-      "section": "Jobs",
-      "forecast": "7.15M",
-      "previous": "7.08M"
-    },
-    {
-      "date": "Nov 03",
-      "time": "10:16",
-      "name": "Congressional Elections",
-      "section": "Other",
-      "forecast": "—",
-      "previous": "—"
-    },
     {
       "date": "Nov 04",
       "time": "10:00",
@@ -191,6 +172,14 @@
       "section": "Growth",
       "forecast": "48.1",
       "previous": "46.3"
+    },
+    {
+      "date": "Nov 06",
+      "time": "10:00",
+      "name": "Prelim UoM Inflation Expectations",
+      "section": "Inflation",
+      "forecast": "—",
+      "previous": "4.7%"
     }
   ],
   "risk": {
@@ -204,15 +193,15 @@
     },
     "score": -0.78,
     "label": "Risk-off",
-    "asOf": "Oct 30",
+    "asOf": "Nov 02",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "19.4",
-        "ref5": "17.9",
-        "ref20": "17.0",
+        "value": "21.1",
+        "ref5": "18.4",
+        "ref20": "17.3",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -221,9 +210,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.44%",
-        "ref5": "3.26%",
-        "ref20": "3.23%",
+        "value": "3.43%",
+        "ref5": "3.29%",
+        "ref20": "3.24%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -243,9 +232,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.66",
-        "ref5": "110.85",
-        "ref20": "110.45",
+        "value": "110.55",
+        "ref5": "110.76",
+        "ref20": "110.46",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 1
@@ -317,11 +306,11 @@
     ]
   },
   "dxy": {
-    "value": 101.615,
-    "ema": 101.819,
-    "emaPrev": 101.687,
-    "trend": 0,
-    "asOf": "Nov 02"
+    "value": 101.868,
+    "ema": 101.824,
+    "emaPrev": 101.735,
+    "trend": 1,
+    "asOf": "Nov 03"
   },
   "unmatched": [
     "Congressional Elections",
