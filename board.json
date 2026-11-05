@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T20:03:52.302Z",
+  "updatedAt": "2026-11-05T01:04:22.534Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -112,9 +112,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.59,
-      "forecast": 4.73,
-      "date": "Nov 02",
+      "actual": 4.61,
+      "forecast": 4.72,
+      "date": "Nov 03",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -170,7 +170,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.56,
+      "score": -0.78,
       "label": "Risk-off"
     },
     "slow": {
@@ -229,10 +229,10 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.34%",
-        "ref5": "0.29%",
-        "ref20": "0.47%",
-        "signalFast": 1,
+        "value": "0.32%",
+        "ref5": "0.38%",
+        "ref20": "0.48%",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 0.5
       }
