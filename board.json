@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T01:08:20.216Z",
+  "updatedAt": "2026-11-06T19:42:32.381Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -42,26 +42,20 @@
       "pending": null
     },
     "nfp": {
-      "actual": 29,
-      "forecast": 89,
-      "date": "Oct 02",
+      "actual": 165,
+      "forecast": 65,
+      "date": "Nov 06",
       "src": "BLS",
-      "period": "2026-09-01",
-      "pending": {
-        "forecast": 65,
-        "eventDate": "2026-11-06T08:30:00-05:00"
-      }
+      "period": "2026-10-01",
+      "pending": null
     },
     "unemp": {
-      "actual": 4.2,
-      "forecast": 4.1,
-      "date": "Oct 02",
+      "actual": 4.1,
+      "forecast": 4.2,
+      "date": "Nov 06",
       "src": "BLS",
-      "period": "2026-09-01",
-      "pending": {
-        "forecast": 4.2,
-        "eventDate": "2026-11-06T08:30:00-05:00"
-      }
+      "period": "2026-10-01",
+      "pending": null
     },
     "claims": {
       "actual": 189,
@@ -159,59 +153,59 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.44,
-      "label": "Risk-on"
+      "score": -0.89,
+      "label": "Risk-off"
     },
     "slow": {
-      "score": 0.11,
-      "label": "Mixed"
+      "score": -1,
+      "label": "Risk-off"
     },
-    "score": 0.11,
-    "label": "Mixed",
-    "asOf": "Nov 04",
+    "score": -1,
+    "label": "Risk-off",
+    "asOf": "Nov 05",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "16.6",
-        "ref5": "19.0",
-        "ref20": "17.6",
-        "signalFast": 1,
-        "signalSlow": 1,
+        "value": "28.2",
+        "ref5": "21.2",
+        "ref20": "18.3",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.32%",
-        "ref5": "3.37%",
-        "ref20": "3.27%",
-        "signalFast": 0,
-        "signalSlow": 0,
+        "value": "3.48%",
+        "ref5": "3.41%",
+        "ref20": "3.29%",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,689",
-        "ref5": "7,620",
-        "ref20": "7,700",
-        "signalFast": 1,
-        "signalSlow": 0,
+        "value": "7,354",
+        "ref5": "7,547",
+        "ref20": "7,680",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "110.93",
-        "ref5": "110.72",
-        "ref20": "110.56",
-        "signalFast": 0,
-        "signalSlow": 0,
+        "value": "108.78",
+        "ref5": "110.39",
+        "ref20": "110.48",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
@@ -281,11 +275,11 @@
     ]
   },
   "dxy": {
-    "value": 101.585,
-    "ema": 101.752,
+    "value": 102.06,
+    "ema": 101.781,
     "emaPrev": 101.84,
-    "trend": -1,
-    "asOf": "Nov 05"
+    "trend": 0,
+    "asOf": "Nov 06"
   },
   "unmatched": [
     "Congressional Elections",
