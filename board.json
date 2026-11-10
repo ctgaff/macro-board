@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T04:20:46.843Z",
+  "updatedAt": "2026-11-10T20:01:36.395Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -20,7 +20,7 @@
     "cpi": {
       "actual": 3.738,
       "forecast": 3.6,
-      "date": "Oct 14",
+      "date": "Nov 10",
       "src": "BLS",
       "period": "2026-09-01",
       "pending": null
@@ -114,30 +114,6 @@
   },
   "upcoming": [
     {
-      "date": "Nov 10",
-      "time": "04:00",
-      "name": "FOMC Member Waller Speaks",
-      "section": "Rates",
-      "forecast": "—",
-      "previous": "—"
-    },
-    {
-      "date": "Nov 10",
-      "time": "08:30",
-      "name": "Core CPI m/m",
-      "section": "Inflation",
-      "forecast": "0.2%",
-      "previous": "0.3%"
-    },
-    {
-      "date": "Nov 10",
-      "time": "08:30",
-      "name": "CPI m/m",
-      "section": "Inflation",
-      "forecast": "0.3%",
-      "previous": "0.6%"
-    },
-    {
       "date": "Nov 12",
       "time": "08:30",
       "name": "Unemployment Claims",
@@ -164,25 +140,25 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.67,
-      "label": "Risk-off"
+      "score": 0.44,
+      "label": "Risk-on"
     },
     "slow": {
-      "score": -1,
+      "score": -0.78,
       "label": "Risk-off"
     },
-    "score": -1,
+    "score": -0.78,
     "label": "Risk-off",
-    "asOf": "Nov 06",
+    "asOf": "Nov 09",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "25.6",
-        "ref5": "22.5",
-        "ref20": "18.8",
-        "signalFast": -1,
+        "value": "19.9",
+        "ref5": "22.2",
+        "ref20": "19.1",
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -190,21 +166,21 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.42%",
-        "ref5": "3.41%",
-        "ref20": "3.30%",
-        "signalFast": 0,
-        "signalSlow": -1,
+        "value": "3.34%",
+        "ref5": "3.39%",
+        "ref20": "3.32%",
+        "signalFast": 1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,354",
-        "ref5": "7,547",
-        "ref20": "7,680",
-        "signalFast": -1,
+        "value": "7,550",
+        "ref5": "7,508",
+        "ref20": "7,645",
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -212,9 +188,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "108.89",
-        "ref5": "110.03",
-        "ref20": "110.39",
+        "value": "109.20",
+        "ref5": "109.76",
+        "ref20": "110.33",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -286,11 +262,11 @@
     ]
   },
   "dxy": {
-    "value": 101.852,
-    "ema": 101.788,
-    "emaPrev": 101.819,
-    "trend": 0,
-    "asOf": "Nov 09"
+    "value": 101.776,
+    "ema": 101.787,
+    "emaPrev": 101.824,
+    "trend": -1,
+    "asOf": "Nov 10"
   },
   "unmatched": [
     "Core CPI m/m",
