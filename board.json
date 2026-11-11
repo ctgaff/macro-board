@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T00:54:53.671Z",
+  "updatedAt": "2026-11-11T19:52:25.534Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -144,22 +144,22 @@
       "label": "Risk-on"
     },
     "slow": {
-      "score": -0.78,
+      "score": -0.56,
       "label": "Risk-off"
     },
-    "score": -0.78,
+    "score": -0.56,
     "label": "Risk-off",
-    "asOf": "Nov 09",
+    "asOf": "Nov 10",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "19.9",
-        "ref5": "22.2",
-        "ref20": "19.1",
+        "value": "19.5",
+        "ref5": "22.0",
+        "ref20": "19.3",
         "signalFast": 1,
-        "signalSlow": -1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
@@ -177,10 +177,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,550",
-        "ref5": "7,508",
-        "ref20": "7,645",
-        "signalFast": 1,
+        "value": "7,521",
+        "ref5": "7,498",
+        "ref20": "7,631",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -188,10 +188,10 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.20",
-        "ref5": "109.76",
-        "ref20": "110.33",
-        "signalFast": -1,
+        "value": "109.22",
+        "ref5": "109.40",
+        "ref20": "110.24",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -262,11 +262,11 @@
     ]
   },
   "dxy": {
-    "value": 101.776,
-    "ema": 101.787,
-    "emaPrev": 101.824,
-    "trend": -1,
-    "asOf": "Nov 10"
+    "value": 102.595,
+    "ema": 101.864,
+    "emaPrev": 101.769,
+    "trend": 1,
+    "asOf": "Nov 11"
   },
   "unmatched": [
     "Core CPI m/m",
