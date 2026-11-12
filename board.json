@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T02:01:08.111Z",
+  "updatedAt": "2026-11-12T20:28:24.879Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -58,15 +58,12 @@
       "pending": null
     },
     "claims": {
-      "actual": 189,
-      "forecast": 197,
-      "date": "Nov 05",
+      "actual": 200,
+      "forecast": 194,
+      "date": "Nov 12",
       "src": "Dept. of Labor",
-      "period": "2026-10-31",
-      "pending": {
-        "forecast": 194,
-        "eventDate": "2026-11-12T08:30:00-05:00"
-      }
+      "period": "2026-11-07",
+      "pending": null
     },
     "adp": {
       "actual": 86,
@@ -114,14 +111,6 @@
   },
   "upcoming": [
     {
-      "date": "Nov 12",
-      "time": "08:30",
-      "name": "Unemployment Claims",
-      "section": "Jobs",
-      "forecast": "194K",
-      "previous": "189K"
-    },
-    {
       "date": "Nov 13",
       "time": "08:30",
       "name": "Core PPI m/m",
@@ -140,34 +129,34 @@
   ],
   "risk": {
     "fast": {
-      "score": 0.33,
+      "score": 0.56,
       "label": "Risk-on"
     },
     "slow": {
-      "score": -0.56,
-      "label": "Risk-off"
+      "score": -0.11,
+      "label": "Mixed"
     },
-    "score": -0.56,
-    "label": "Risk-off",
-    "asOf": "Nov 10",
+    "score": -0.11,
+    "label": "Mixed",
+    "asOf": "Nov 11",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "19.5",
-        "ref5": "22.0",
+        "value": "17.5",
+        "ref5": "22.1",
         "ref20": "19.3",
         "signalFast": 1,
-        "signalSlow": 0,
+        "signalSlow": 1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.34%",
-        "ref5": "3.39%",
+        "value": "3.30%",
+        "ref5": "3.37%",
         "ref20": "3.32%",
         "signalFast": 1,
         "signalSlow": 0,
@@ -177,20 +166,20 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,521",
-        "ref5": "7,498",
-        "ref20": "7,631",
-        "signalFast": 0,
-        "signalSlow": -1,
+        "value": "7,619",
+        "ref5": "7,484",
+        "ref20": "7,626",
+        "signalFast": 1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "109.22",
-        "ref5": "109.40",
-        "ref20": "110.24",
+        "value": "108.93",
+        "ref5": "109.00",
+        "ref20": "110.23",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
@@ -262,11 +251,11 @@
     ]
   },
   "dxy": {
-    "value": 102.595,
-    "ema": 101.864,
-    "emaPrev": 101.769,
+    "value": 102.975,
+    "ema": 101.97,
+    "emaPrev": 101.752,
     "trend": 1,
-    "asOf": "Nov 11"
+    "asOf": "Nov 12"
   },
   "unmatched": [
     "Core CPI m/m",
