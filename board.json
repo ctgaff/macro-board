@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T01:28:56.847Z",
+  "updatedAt": "2026-11-13T20:04:03.114Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -26,11 +26,11 @@
       "pending": null
     },
     "ppi": {
-      "actual": 6.346,
+      "actual": 6.524,
       "forecast": 5.3,
-      "date": "Oct 15",
+      "date": "Nov 13",
       "src": "BLS",
-      "period": "2026-09-01",
+      "period": "2026-10-01",
       "pending": null
     },
     "pce": {
@@ -133,20 +133,20 @@
       "label": "Risk-on"
     },
     "slow": {
-      "score": -0.11,
+      "score": 0.11,
       "label": "Mixed"
     },
-    "score": -0.11,
+    "score": 0.11,
     "label": "Mixed",
-    "asOf": "Nov 11",
+    "asOf": "Nov 12",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "17.5",
-        "ref5": "22.1",
-        "ref20": "19.3",
+        "value": "18.7",
+        "ref5": "20.2",
+        "ref20": "19.4",
         "signalFast": 1,
         "signalSlow": 1,
         "weight": 1
@@ -155,20 +155,20 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.30%",
-        "ref5": "3.37%",
+        "value": "3.20%",
+        "ref5": "3.35%",
         "ref20": "3.32%",
         "signalFast": 1,
-        "signalSlow": 0,
+        "signalSlow": 1,
         "weight": 1
       },
       {
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,619",
-        "ref5": "7,484",
-        "ref20": "7,626",
+        "value": "7,592",
+        "ref5": "7,532",
+        "ref20": "7,618",
         "signalFast": 1,
         "signalSlow": 0,
         "weight": 1
@@ -177,9 +177,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "108.93",
-        "ref5": "109.00",
-        "ref20": "110.23",
+        "value": "108.56",
+        "ref5": "108.96",
+        "ref20": "110.16",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
@@ -251,11 +251,11 @@
     ]
   },
   "dxy": {
-    "value": 102.975,
-    "ema": 101.97,
-    "emaPrev": 101.752,
+    "value": 103.241,
+    "ema": 102.091,
+    "emaPrev": 101.781,
     "trend": 1,
-    "asOf": "Nov 12"
+    "asOf": "Nov 13"
   },
   "unmatched": [
     "Core CPI m/m",
