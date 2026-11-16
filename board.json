@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T01:03:42.673Z",
+  "updatedAt": "2026-11-16T22:32:30.035Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -15,7 +15,10 @@
       "date": "Oct 15",
       "src": "Census Bureau",
       "period": "2026-09-01",
-      "pending": null
+      "pending": {
+        "forecast": 0.1,
+        "eventDate": "2026-11-17T08:30:00-05:00"
+      }
     },
     "cpi": {
       "actual": 3.738,
@@ -63,7 +66,10 @@
       "date": "Nov 12",
       "src": "Dept. of Labor",
       "period": "2026-11-07",
-      "pending": null
+      "pending": {
+        "forecast": 199,
+        "eventDate": "2026-11-19T08:30:00-05:00"
+      }
     },
     "adp": {
       "actual": 86,
@@ -103,62 +109,102 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.86,
-      "forecast": 4.67,
-      "date": "Nov 12",
+      "actual": 4.88,
+      "forecast": 4.68,
+      "date": "Nov 13",
       "src": "Treasury · vs 21-day avg"
     }
   },
   "upcoming": [
     {
-      "date": "Nov 13",
+      "date": "Nov 17",
       "time": "08:30",
-      "name": "Core PPI m/m",
-      "section": "Inflation",
-      "forecast": "0.3%",
-      "previous": "0.7%"
+      "name": "Core Retail Sales m/m",
+      "section": "Growth",
+      "forecast": "0.4%",
+      "previous": "0.9%"
     },
     {
-      "date": "Nov 13",
+      "date": "Nov 17",
       "time": "08:30",
-      "name": "PPI m/m",
+      "name": "Retail Sales m/m",
+      "section": "Growth",
+      "forecast": "0.1%",
+      "previous": "0.8%"
+    },
+    {
+      "date": "Nov 18",
+      "time": "14:00",
+      "name": "FOMC Meeting Minutes",
+      "section": "Rates",
+      "forecast": "—",
+      "previous": "—"
+    },
+    {
+      "date": "Nov 19",
+      "time": "08:30",
+      "name": "Philly Fed Manufacturing Index",
+      "section": "Rates",
+      "forecast": "19.2",
+      "previous": "20.9"
+    },
+    {
+      "date": "Nov 19",
+      "time": "08:30",
+      "name": "Unemployment Claims",
+      "section": "Jobs",
+      "forecast": "199K",
+      "previous": "200K"
+    },
+    {
+      "date": "Nov 20",
+      "time": "10:00",
+      "name": "Revised UoM Consumer Sentiment",
+      "section": "Growth",
+      "forecast": "52.1",
+      "previous": "51.0"
+    },
+    {
+      "date": "Nov 20",
+      "time": "10:00",
+      "name": "Revised UoM Inflation Expectations",
       "section": "Inflation",
-      "forecast": "0.4%",
-      "previous": "1.3%"
+      "forecast": "—",
+      "previous": "4.3%"
     }
   ],
   "risk": {
     "fast": {
-      "score": 0.56,
-      "label": "Risk-on"
+      "score": -0.33,
+      "label": "Risk-off"
     },
     "slow": {
-      "score": 0.11,
-      "label": "Mixed"
+      "score": -0.33,
+      "label": "Risk-off"
     },
-    "score": 0.11,
-    "label": "Mixed",
-    "asOf": "Nov 12",
+    "score": -0.33,
+    "label": "Risk-off",
+    "asOf": "Nov 13",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "18.7",
-        "ref5": "20.2",
+        "value": "19.3",
+        "ref5": "19.0",
         "ref20": "19.4",
-        "signalFast": 1,
-        "signalSlow": 1,
+        "signalFast": 0,
+        "signalSlow": 0,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.20%",
-        "ref5": "3.35%",
+        "value": "3.23%",
+        "ref5": "3.27%",
         "ref20": "3.32%",
-        "signalFast": 1,
+        "signalFast": 0,
         "signalSlow": 1,
         "weight": 1
       },
@@ -166,21 +212,21 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,592",
-        "ref5": "7,532",
-        "ref20": "7,618",
-        "signalFast": 1,
-        "signalSlow": 0,
+        "value": "7,562",
+        "ref5": "7,569",
+        "ref20": "7,613",
+        "signalFast": 0,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "108.56",
-        "ref5": "108.96",
-        "ref20": "110.16",
-        "signalFast": 0,
+        "value": "107.83",
+        "ref5": "108.75",
+        "ref20": "110.02",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -188,9 +234,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.27%",
-        "ref5": "0.38%",
-        "ref20": "0.33%",
+        "value": "0.29%",
+        "ref5": "0.35%",
+        "ref20": "0.35%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 0.5
@@ -251,17 +297,16 @@
     ]
   },
   "dxy": {
-    "value": 103.241,
-    "ema": 102.091,
-    "emaPrev": 101.781,
+    "value": 103.47,
+    "ema": 102.222,
+    "emaPrev": 101.788,
     "trend": 1,
-    "asOf": "Nov 13"
+    "asOf": "Nov 16"
   },
   "unmatched": [
-    "Core CPI m/m",
-    "CPI m/m",
-    "Core PPI m/m",
-    "PPI m/m"
+    "Fed Chairman Warsh Speaks",
+    "Core Retail Sales m/m",
+    "FOMC Meeting Minutes"
   ],
   "missingForecast": []
 }
