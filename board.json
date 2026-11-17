@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T22:32:30.035Z",
+  "updatedAt": "2026-11-17T04:47:40.842Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -175,7 +175,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.33,
+      "score": -0.56,
       "label": "Risk-off"
     },
     "slow": {
@@ -212,10 +212,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,562",
-        "ref5": "7,569",
-        "ref20": "7,613",
-        "signalFast": 0,
+        "value": "7,417",
+        "ref5": "7,542",
+        "ref20": "7,600",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -244,55 +244,55 @@
     ]
   },
   "cot": {
-    "asOf": "Nov 03",
+    "asOf": "Nov 10",
     "ccys": [
       {
         "ccy": "NZD",
-        "net": -60015,
-        "chg": -2325,
-        "pct": 3
+        "net": -55366,
+        "chg": 4649,
+        "pct": 6
       },
       {
         "ccy": "AUD",
-        "net": -129457,
-        "chg": -1142,
+        "net": -151753,
+        "chg": -22296,
         "pct": 1
       },
       {
         "ccy": "EUR",
-        "net": -157791,
-        "chg": -13897,
-        "pct": 1
+        "net": -136396,
+        "chg": 21395,
+        "pct": 3
       },
       {
         "ccy": "GBP",
-        "net": -59821,
-        "chg": 19593,
-        "pct": 17
+        "net": -43216,
+        "chg": 16605,
+        "pct": 28
       },
       {
         "ccy": "JPY",
-        "net": 102321,
-        "chg": 730,
-        "pct": 86
+        "net": 123113,
+        "chg": 20792,
+        "pct": 90
       },
       {
         "ccy": "CHF",
-        "net": -16589,
-        "chg": 3460,
-        "pct": 92
+        "net": -9153,
+        "chg": 7436,
+        "pct": 94
       },
       {
         "ccy": "CAD",
-        "net": -41775,
-        "chg": 24649,
-        "pct": 81
+        "net": -32592,
+        "chg": 9183,
+        "pct": 85
       },
       {
         "ccy": "USD",
-        "net": 14190,
-        "chg": 69,
-        "pct": 78
+        "net": 13813,
+        "chg": -377,
+        "pct": 77
       }
     ]
   },
