@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T04:47:40.842Z",
+  "updatedAt": "2026-11-17T21:21:23.100Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -10,15 +10,12 @@
       "pending": null
     },
     "retail": {
-      "actual": 0.771,
-      "forecast": 0.3,
-      "date": "Oct 15",
+      "actual": 0.212,
+      "forecast": 0.1,
+      "date": "Nov 17",
       "src": "Census Bureau",
-      "period": "2026-09-01",
-      "pending": {
-        "forecast": 0.1,
-        "eventDate": "2026-11-17T08:30:00-05:00"
-      }
+      "period": "2026-10-01",
+      "pending": null
     },
     "cpi": {
       "actual": 3.738,
@@ -109,29 +106,13 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.88,
+      "actual": 4.83,
       "forecast": 4.68,
-      "date": "Nov 13",
+      "date": "Nov 16",
       "src": "Treasury · vs 21-day avg"
     }
   },
   "upcoming": [
-    {
-      "date": "Nov 17",
-      "time": "08:30",
-      "name": "Core Retail Sales m/m",
-      "section": "Growth",
-      "forecast": "0.4%",
-      "previous": "0.9%"
-    },
-    {
-      "date": "Nov 17",
-      "time": "08:30",
-      "name": "Retail Sales m/m",
-      "section": "Growth",
-      "forecast": "0.1%",
-      "previous": "0.8%"
-    },
     {
       "date": "Nov 18",
       "time": "14:00",
@@ -175,37 +156,37 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.56,
+      "score": -1,
       "label": "Risk-off"
     },
     "slow": {
-      "score": -0.33,
+      "score": -0.78,
       "label": "Risk-off"
     },
-    "score": -0.33,
+    "score": -0.78,
     "label": "Risk-off",
-    "asOf": "Nov 13",
+    "asOf": "Nov 16",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "19.3",
-        "ref5": "19.0",
-        "ref20": "19.4",
-        "signalFast": 0,
-        "signalSlow": 0,
+        "value": "22.9",
+        "ref5": "19.6",
+        "ref20": "19.6",
+        "signalFast": -1,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.23%",
+        "value": "3.34%",
         "ref5": "3.27%",
         "ref20": "3.32%",
-        "signalFast": 0,
-        "signalSlow": 1,
+        "signalFast": -1,
+        "signalSlow": 0,
         "weight": 1
       },
       {
@@ -223,9 +204,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "107.83",
-        "ref5": "108.75",
-        "ref20": "110.02",
+        "value": "107.29",
+        "ref5": "108.37",
+        "ref20": "109.87",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -297,11 +278,11 @@
     ]
   },
   "dxy": {
-    "value": 103.47,
-    "ema": 102.222,
-    "emaPrev": 101.788,
+    "value": 103.609,
+    "ema": 102.354,
+    "emaPrev": 101.787,
     "trend": 1,
-    "asOf": "Nov 16"
+    "asOf": "Nov 17"
   },
   "unmatched": [
     "Fed Chairman Warsh Speaks",
