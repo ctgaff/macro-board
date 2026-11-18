@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T03:08:42.994Z",
+  "updatedAt": "2026-11-18T20:54:51.073Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -114,14 +114,6 @@
   },
   "upcoming": [
     {
-      "date": "Nov 18",
-      "time": "14:00",
-      "name": "FOMC Meeting Minutes",
-      "section": "Rates",
-      "forecast": "—",
-      "previous": "—"
-    },
-    {
       "date": "Nov 19",
       "time": "08:30",
       "name": "Philly Fed Manufacturing Index",
@@ -160,20 +152,20 @@
       "label": "Risk-off"
     },
     "slow": {
-      "score": -0.78,
+      "score": -1,
       "label": "Risk-off"
     },
-    "score": -0.78,
+    "score": -1,
     "label": "Risk-off",
-    "asOf": "Nov 16",
+    "asOf": "Nov 17",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "22.9",
-        "ref5": "19.6",
-        "ref20": "19.6",
+        "value": "25.5",
+        "ref5": "20.8",
+        "ref20": "20.0",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -182,20 +174,20 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.34%",
-        "ref5": "3.27%",
-        "ref20": "3.32%",
+        "value": "3.43%",
+        "ref5": "3.30%",
+        "ref20": "3.33%",
         "signalFast": -1,
-        "signalSlow": 0,
+        "signalSlow": -1,
         "weight": 1
       },
       {
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,417",
-        "ref5": "7,542",
-        "ref20": "7,600",
+        "value": "7,341",
+        "ref5": "7,506",
+        "ref20": "7,581",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -204,9 +196,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "107.29",
-        "ref5": "108.37",
-        "ref20": "109.87",
+        "value": "107.31",
+        "ref5": "107.98",
+        "ref20": "109.68",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -278,11 +270,11 @@
     ]
   },
   "dxy": {
-    "value": 103.609,
-    "ema": 102.354,
-    "emaPrev": 101.787,
+    "value": 103.797,
+    "ema": 102.492,
+    "emaPrev": 101.864,
     "trend": 1,
-    "asOf": "Nov 17"
+    "asOf": "Nov 18"
   },
   "unmatched": [
     "Fed Chairman Warsh Speaks",
