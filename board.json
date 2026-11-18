@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T21:21:23.100Z",
+  "updatedAt": "2026-11-18T03:08:42.994Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -64,7 +64,7 @@
       "src": "Dept. of Labor",
       "period": "2026-11-07",
       "pending": {
-        "forecast": 199,
+        "forecast": 198,
         "eventDate": "2026-11-19T08:30:00-05:00"
       }
     },
@@ -126,7 +126,7 @@
       "time": "08:30",
       "name": "Philly Fed Manufacturing Index",
       "section": "Rates",
-      "forecast": "19.2",
+      "forecast": "20.6",
       "previous": "20.9"
     },
     {
@@ -134,7 +134,7 @@
       "time": "08:30",
       "name": "Unemployment Claims",
       "section": "Jobs",
-      "forecast": "199K",
+      "forecast": "198K",
       "previous": "200K"
     },
     {
@@ -142,7 +142,7 @@
       "time": "10:00",
       "name": "Revised UoM Consumer Sentiment",
       "section": "Growth",
-      "forecast": "52.1",
+      "forecast": "51.7",
       "previous": "51.0"
     },
     {
@@ -156,7 +156,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -1,
+      "score": -0.89,
       "label": "Risk-off"
     },
     "slow": {
@@ -215,10 +215,10 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.29%",
-        "ref5": "0.35%",
-        "ref20": "0.35%",
-        "signalFast": -1,
+        "value": "0.30%",
+        "ref5": "0.32%",
+        "ref20": "0.38%",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 0.5
       }
