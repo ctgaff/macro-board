@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T02:49:33.316Z",
+  "updatedAt": "2026-11-19T20:59:34.124Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -58,15 +58,12 @@
       "pending": null
     },
     "claims": {
-      "actual": 200,
-      "forecast": 194,
-      "date": "Nov 12",
+      "actual": 203,
+      "forecast": 198,
+      "date": "Nov 19",
       "src": "Dept. of Labor",
-      "period": "2026-11-07",
-      "pending": {
-        "forecast": 198,
-        "eventDate": "2026-11-19T08:30:00-05:00"
-      }
+      "period": "2026-11-14",
+      "pending": null
     },
     "adp": {
       "actual": 86,
@@ -114,22 +111,6 @@
   },
   "upcoming": [
     {
-      "date": "Nov 19",
-      "time": "08:30",
-      "name": "Philly Fed Manufacturing Index",
-      "section": "Rates",
-      "forecast": "20.6",
-      "previous": "20.9"
-    },
-    {
-      "date": "Nov 19",
-      "time": "08:30",
-      "name": "Unemployment Claims",
-      "section": "Jobs",
-      "forecast": "198K",
-      "previous": "200K"
-    },
-    {
       "date": "Nov 20",
       "time": "10:00",
       "name": "Revised UoM Consumer Sentiment",
@@ -148,7 +129,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.89,
+      "score": -0.67,
       "label": "Risk-off"
     },
     "slow": {
@@ -157,15 +138,15 @@
     },
     "score": -1,
     "label": "Risk-off",
-    "asOf": "Nov 17",
+    "asOf": "Nov 18",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "25.5",
-        "ref5": "20.8",
-        "ref20": "20.0",
+        "value": "24.6",
+        "ref5": "22.2",
+        "ref20": "20.4",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -174,9 +155,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.43%",
-        "ref5": "3.30%",
-        "ref20": "3.33%",
+        "value": "3.47%",
+        "ref5": "3.33%",
+        "ref20": "3.34%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -196,10 +177,10 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "107.31",
-        "ref5": "107.98",
-        "ref20": "109.68",
-        "signalFast": -1,
+        "value": "107.36",
+        "ref5": "107.67",
+        "ref20": "109.54",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -270,11 +251,11 @@
     ]
   },
   "dxy": {
-    "value": 103.797,
-    "ema": 102.492,
-    "emaPrev": 101.864,
+    "value": 103.719,
+    "ema": 102.609,
+    "emaPrev": 101.97,
     "trend": 1,
-    "asOf": "Nov 18"
+    "asOf": "Nov 19"
   },
   "unmatched": [
     "Fed Chairman Warsh Speaks",
