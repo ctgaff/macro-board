@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T20:54:51.073Z",
+  "updatedAt": "2026-11-19T02:49:33.316Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -106,9 +106,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.83,
+      "actual": 4.8,
       "forecast": 4.68,
-      "date": "Nov 16",
+      "date": "Nov 17",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -185,9 +185,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,341",
-        "ref5": "7,506",
-        "ref20": "7,581",
+        "value": "7,324",
+        "ref5": "7,447",
+        "ref20": "7,559",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -207,9 +207,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.30%",
-        "ref5": "0.32%",
-        "ref20": "0.38%",
+        "value": "0.27%",
+        "ref5": "0.25%",
+        "ref20": "0.33%",
         "signalFast": 0,
         "signalSlow": -1,
         "weight": 0.5
