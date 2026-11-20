@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T20:59:34.124Z",
+  "updatedAt": "2026-11-20T02:38:39.662Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -105,7 +105,7 @@
     "y2": {
       "actual": 4.8,
       "forecast": 4.68,
-      "date": "Nov 17",
+      "date": "Nov 18",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -129,14 +129,14 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.67,
+      "score": -0.56,
       "label": "Risk-off"
     },
     "slow": {
-      "score": -1,
+      "score": -0.89,
       "label": "Risk-off"
     },
-    "score": -1,
+    "score": -0.89,
     "label": "Risk-off",
     "asOf": "Nov 18",
     "gauges": [
@@ -188,11 +188,11 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.27%",
-        "ref5": "0.25%",
-        "ref20": "0.33%",
-        "signalFast": 0,
-        "signalSlow": -1,
+        "value": "0.28%",
+        "ref5": "0.24%",
+        "ref20": "0.32%",
+        "signalFast": 1,
+        "signalSlow": 0,
         "weight": 0.5
       }
     ]
@@ -257,10 +257,6 @@
     "trend": 1,
     "asOf": "Nov 19"
   },
-  "unmatched": [
-    "Fed Chairman Warsh Speaks",
-    "Core Retail Sales m/m",
-    "FOMC Meeting Minutes"
-  ],
+  "unmatched": [],
   "missingForecast": []
 }
