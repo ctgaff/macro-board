@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T02:38:39.662Z",
+  "updatedAt": "2026-11-20T20:44:54.437Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -129,7 +129,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.56,
+      "score": -0.78,
       "label": "Risk-off"
     },
     "slow": {
@@ -138,15 +138,15 @@
     },
     "score": -0.89,
     "label": "Risk-off",
-    "asOf": "Nov 18",
+    "asOf": "Nov 19",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "24.6",
-        "ref5": "22.2",
-        "ref20": "20.4",
+        "value": "28.4",
+        "ref5": "24.1",
+        "ref20": "20.9",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -155,8 +155,8 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.47%",
-        "ref5": "3.33%",
+        "value": "3.52%",
+        "ref5": "3.40%",
         "ref20": "3.34%",
         "signalFast": -1,
         "signalSlow": -1,
@@ -166,9 +166,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,324",
-        "ref5": "7,447",
-        "ref20": "7,559",
+        "value": "7,176",
+        "ref5": "7,364",
+        "ref20": "7,535",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -177,10 +177,10 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "107.36",
-        "ref5": "107.67",
-        "ref20": "109.54",
-        "signalFast": 0,
+        "value": "105.75",
+        "ref5": "107.11",
+        "ref20": "109.32",
+        "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -198,65 +198,69 @@
     ]
   },
   "cot": {
-    "asOf": "Nov 10",
+    "asOf": "Nov 17",
     "ccys": [
       {
         "ccy": "NZD",
-        "net": -55366,
-        "chg": 4649,
-        "pct": 6
+        "net": -63245,
+        "chg": -7879,
+        "pct": 2
       },
       {
         "ccy": "AUD",
-        "net": -151753,
-        "chg": -22296,
+        "net": -182060,
+        "chg": -30307,
         "pct": 1
       },
       {
         "ccy": "EUR",
-        "net": -136396,
-        "chg": 21395,
-        "pct": 3
+        "net": -142710,
+        "chg": -6314,
+        "pct": 2
       },
       {
         "ccy": "GBP",
-        "net": -43216,
-        "chg": 16605,
-        "pct": 28
+        "net": -32304,
+        "chg": 10912,
+        "pct": 34
       },
       {
         "ccy": "JPY",
-        "net": 123113,
-        "chg": 20792,
-        "pct": 90
+        "net": 116317,
+        "chg": -6796,
+        "pct": 87
       },
       {
         "ccy": "CHF",
-        "net": -9153,
-        "chg": 7436,
+        "net": -8281,
+        "chg": 872,
         "pct": 94
       },
       {
         "ccy": "CAD",
-        "net": -32592,
-        "chg": 9183,
-        "pct": 85
+        "net": -45048,
+        "chg": -12456,
+        "pct": 78
       },
       {
         "ccy": "USD",
-        "net": 13813,
-        "chg": -377,
-        "pct": 77
+        "net": 13345,
+        "chg": -468,
+        "pct": 76
       }
     ]
   },
   "dxy": {
-    "value": 103.719,
-    "ema": 102.609,
-    "emaPrev": 101.97,
+    "value": 103.653,
+    "ema": 102.708,
+    "emaPrev": 102.091,
     "trend": 1,
-    "asOf": "Nov 19"
+    "asOf": "Nov 20"
   },
-  "unmatched": [],
+  "unmatched": [
+    "Fed Chairman Warsh Speaks",
+    "Core Retail Sales m/m",
+    "FOMC Meeting Minutes"
+  ],
   "missingForecast": []
 }
