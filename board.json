@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T01:46:17.042Z",
+  "updatedAt": "2026-11-24T00:23:44.804Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -7,7 +7,10 @@
       "date": "Oct 29",
       "src": "BEA",
       "period": "2026-07-01",
-      "pending": null
+      "pending": {
+        "forecast": 3.5,
+        "eventDate": "2026-11-25T08:30:00-05:00"
+      }
     },
     "retail": {
       "actual": 0.212,
@@ -63,7 +66,10 @@
       "date": "Nov 19",
       "src": "Dept. of Labor",
       "period": "2026-11-14",
-      "pending": null
+      "pending": {
+        "forecast": 201,
+        "eventDate": "2026-11-25T08:30:00-05:00"
+      }
     },
     "adp": {
       "actual": 86,
@@ -100,31 +106,50 @@
       "forecast": 81.2,
       "date": "Sep 29",
       "src": "Conference Board",
-      "pending": null
+      "pending": {
+        "forecast": 92.4,
+        "eventDate": "2026-11-24T10:00:00-05:00"
+      }
     },
     "y2": {
-      "actual": 4.76,
-      "forecast": 4.68,
-      "date": "Nov 19",
+      "actual": 4.63,
+      "forecast": 4.67,
+      "date": "Nov 20",
       "src": "Treasury · vs 21-day avg"
     }
   },
   "upcoming": [
     {
-      "date": "Nov 20",
+      "date": "Nov 24",
       "time": "10:00",
-      "name": "Revised UoM Consumer Sentiment",
+      "name": "CB Consumer Confidence",
       "section": "Growth",
-      "forecast": "51.7",
-      "previous": "51.0"
+      "forecast": "92.4",
+      "previous": "91.7"
     },
     {
-      "date": "Nov 20",
-      "time": "10:00",
-      "name": "Revised UoM Inflation Expectations",
+      "date": "Nov 25",
+      "time": "08:30",
+      "name": "Core PCE Price Index m/m",
       "section": "Inflation",
-      "forecast": "—",
-      "previous": "4.3%"
+      "forecast": "0.3%",
+      "previous": "0.3%"
+    },
+    {
+      "date": "Nov 25",
+      "time": "08:30",
+      "name": "Prelim GDP q/q",
+      "section": "Growth",
+      "forecast": "3.5%",
+      "previous": "3.4%"
+    },
+    {
+      "date": "Nov 25",
+      "time": "08:30",
+      "name": "Prelim GDP Price Index q/q",
+      "section": "Growth",
+      "forecast": "2.3%",
+      "previous": "2.3%"
     }
   ],
   "risk": {
@@ -138,15 +163,15 @@
     },
     "score": -0.89,
     "label": "Risk-off",
-    "asOf": "Nov 19",
+    "asOf": "Nov 20",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "28.4",
-        "ref5": "24.1",
-        "ref20": "20.9",
+        "value": "35.9",
+        "ref5": "27.5",
+        "ref20": "21.7",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -155,9 +180,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.52%",
-        "ref5": "3.40%",
-        "ref20": "3.34%",
+        "value": "3.76%",
+        "ref5": "3.50%",
+        "ref20": "3.36%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -166,9 +191,9 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,176",
-        "ref5": "7,364",
-        "ref20": "7,535",
+        "value": "6,910",
+        "ref5": "7,233",
+        "ref20": "7,499",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -177,9 +202,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "105.75",
-        "ref5": "107.11",
-        "ref20": "109.32",
+        "value": "105.26",
+        "ref5": "106.59",
+        "ref20": "109.06",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -189,7 +214,7 @@
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
         "value": "0.29%",
-        "ref5": "0.27%",
+        "ref5": "0.29%",
         "ref20": "0.31%",
         "signalFast": 0,
         "signalSlow": 0,
@@ -251,16 +276,14 @@
     ]
   },
   "dxy": {
-    "value": 103.653,
-    "ema": 102.708,
-    "emaPrev": 102.091,
+    "value": 104.087,
+    "ema": 102.839,
+    "emaPrev": 102.222,
     "trend": 1,
-    "asOf": "Nov 20"
+    "asOf": "Nov 23"
   },
   "unmatched": [
-    "Fed Chairman Warsh Speaks",
-    "Core Retail Sales m/m",
-    "FOMC Meeting Minutes"
+    "Core PCE Price Index m/m"
   ],
   "missingForecast": []
 }
