@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T00:23:44.804Z",
+  "updatedAt": "2026-11-24T22:47:04.345Z",
   "indicators": {
     "gdp": {
       "actual": 3.4,
@@ -103,30 +103,19 @@
     },
     "conf": {
       "actual": 81.9,
-      "forecast": 81.2,
+      "forecast": 92.4,
       "date": "Sep 29",
       "src": "Conference Board",
-      "pending": {
-        "forecast": 92.4,
-        "eventDate": "2026-11-24T10:00:00-05:00"
-      }
+      "pending": null
     },
     "y2": {
       "actual": 4.63,
       "forecast": 4.67,
-      "date": "Nov 20",
+      "date": "Nov 23",
       "src": "Treasury · vs 21-day avg"
     }
   },
   "upcoming": [
-    {
-      "date": "Nov 24",
-      "time": "10:00",
-      "name": "CB Consumer Confidence",
-      "section": "Growth",
-      "forecast": "92.4",
-      "previous": "91.7"
-    },
     {
       "date": "Nov 25",
       "time": "08:30",
@@ -154,7 +143,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.89,
+      "score": -0.44,
       "label": "Risk-off"
     },
     "slow": {
@@ -163,15 +152,15 @@
     },
     "score": -0.89,
     "label": "Risk-off",
-    "asOf": "Nov 20",
+    "asOf": "Nov 23",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "35.9",
-        "ref5": "27.5",
-        "ref20": "21.7",
+        "value": "26.6",
+        "ref5": "28.2",
+        "ref20": "22.1",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -180,9 +169,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.76%",
-        "ref5": "3.50%",
-        "ref20": "3.36%",
+        "value": "3.63%",
+        "ref5": "3.56%",
+        "ref20": "3.38%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -191,10 +180,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "6,910",
-        "ref5": "7,233",
-        "ref20": "7,499",
-        "signalFast": -1,
+        "value": "7,237",
+        "ref5": "7,198",
+        "ref20": "7,477",
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -202,9 +191,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "105.26",
-        "ref5": "106.59",
-        "ref20": "109.06",
+        "value": "105.65",
+        "ref5": "106.27",
+        "ref20": "108.79",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -213,9 +202,9 @@
         "id": "curve",
         "name": "10y–2y curve",
         "note": "Steepening = risk-on",
-        "value": "0.29%",
-        "ref5": "0.29%",
-        "ref20": "0.31%",
+        "value": "0.28%",
+        "ref5": "0.30%",
+        "ref20": "0.32%",
         "signalFast": 0,
         "signalSlow": 0,
         "weight": 0.5
@@ -276,11 +265,11 @@
     ]
   },
   "dxy": {
-    "value": 104.087,
-    "ema": 102.839,
-    "emaPrev": 102.222,
+    "value": 103.884,
+    "ema": 102.939,
+    "emaPrev": 102.354,
     "trend": 1,
-    "asOf": "Nov 23"
+    "asOf": "Nov 24"
   },
   "unmatched": [
     "Core PCE Price Index m/m"
