@@ -1,16 +1,13 @@
 {
-  "updatedAt": "2026-11-25T05:03:26.406Z",
+  "updatedAt": "2026-11-25T21:59:19.644Z",
   "indicators": {
     "gdp": {
-      "actual": 3.4,
-      "forecast": 3.2,
-      "date": "Oct 29",
+      "actual": 4.3,
+      "forecast": 3.5,
+      "date": "Nov 25",
       "src": "BEA",
       "period": "2026-07-01",
-      "pending": {
-        "forecast": 3.5,
-        "eventDate": "2026-11-25T08:30:00-05:00"
-      }
+      "pending": null
     },
     "retail": {
       "actual": 0.212,
@@ -37,11 +34,11 @@
       "pending": null
     },
     "pce": {
-      "actual": 3.649,
+      "actual": 3.845,
       "forecast": 3.3,
-      "date": "Oct 29",
+      "date": "Nov 25",
       "src": "BEA",
-      "period": "2026-09-01",
+      "period": "2026-10-01",
       "pending": null
     },
     "nfp": {
@@ -61,15 +58,12 @@
       "pending": null
     },
     "claims": {
-      "actual": 203,
-      "forecast": 198,
-      "date": "Nov 19",
+      "actual": 189,
+      "forecast": 201,
+      "date": "Nov 25",
       "src": "Dept. of Labor",
-      "period": "2026-11-14",
-      "pending": {
-        "forecast": 201,
-        "eventDate": "2026-11-25T08:30:00-05:00"
-      }
+      "period": "2026-11-21",
+      "pending": null
     },
     "adp": {
       "actual": 86,
@@ -111,7 +105,7 @@
     "y2": {
       "actual": 4.63,
       "forecast": 4.67,
-      "date": "Nov 23",
+      "date": "Nov 24",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -143,7 +137,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.44,
+      "score": -0.67,
       "label": "Risk-off"
     },
     "slow": {
@@ -152,15 +146,15 @@
     },
     "score": -0.89,
     "label": "Risk-off",
-    "asOf": "Nov 23",
+    "asOf": "Nov 24",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "26.6",
-        "ref5": "28.2",
-        "ref20": "22.1",
+        "value": "26.4",
+        "ref5": "28.4",
+        "ref20": "22.6",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -169,9 +163,9 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.63%",
-        "ref5": "3.56%",
-        "ref20": "3.38%",
+        "value": "3.72%",
+        "ref5": "3.62%",
+        "ref20": "3.41%",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -180,10 +174,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,237",
-        "ref5": "7,198",
-        "ref20": "7,477",
-        "signalFast": 1,
+        "value": "7,201",
+        "ref5": "7,170",
+        "ref20": "7,451",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -191,9 +185,9 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "105.65",
-        "ref5": "106.27",
-        "ref20": "108.79",
+        "value": "104.67",
+        "ref5": "105.74",
+        "ref20": "108.47",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -265,11 +259,11 @@
     ]
   },
   "dxy": {
-    "value": 103.884,
-    "ema": 102.939,
-    "emaPrev": 102.354,
+    "value": 104.037,
+    "ema": 103.043,
+    "emaPrev": 102.492,
     "trend": 1,
-    "asOf": "Nov 24"
+    "asOf": "Nov 25"
   },
   "unmatched": [
     "Core PCE Price Index m/m"
