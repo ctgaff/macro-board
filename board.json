@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:25:49.309Z",
+  "updatedAt": "2026-11-26T21:56:56.345Z",
   "indicators": {
     "gdp": {
       "actual": 4.3,
@@ -137,7 +137,7 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.78,
+      "score": -0.56,
       "label": "Risk-off"
     },
     "slow": {
@@ -185,10 +185,10 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "104.67",
-        "ref5": "105.74",
-        "ref20": "108.47",
-        "signalFast": -1,
+        "value": "105.68",
+        "ref5": "105.40",
+        "ref20": "108.20",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -259,11 +259,11 @@
     ]
   },
   "dxy": {
-    "value": 104.037,
-    "ema": 103.043,
-    "emaPrev": 102.492,
+    "value": 103.737,
+    "ema": 103.11,
+    "emaPrev": 102.609,
     "trend": 1,
-    "asOf": "Nov 25"
+    "asOf": "Nov 26"
   },
   "unmatched": [
     "Core PCE Price Index m/m"
