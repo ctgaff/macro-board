@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T04:34:18.369Z",
+  "updatedAt": "2026-11-27T21:39:25.769Z",
   "indicators": {
     "gdp": {
       "actual": 4.3,
@@ -103,9 +103,9 @@
       "pending": null
     },
     "y2": {
-      "actual": 4.63,
+      "actual": 4.61,
       "forecast": 4.67,
-      "date": "Nov 24",
+      "date": "Nov 25",
       "src": "Treasury · vs 21-day avg"
     }
   },
@@ -137,8 +137,8 @@
   ],
   "risk": {
     "fast": {
-      "score": -0.56,
-      "label": "Risk-off"
+      "score": 0.11,
+      "label": "Mixed"
     },
     "slow": {
       "score": -0.89,
@@ -146,15 +146,15 @@
     },
     "score": -0.89,
     "label": "Risk-off",
-    "asOf": "Nov 24",
+    "asOf": "Nov 26",
     "gauges": [
       {
         "id": "vix",
         "name": "VIX",
         "note": "Equity volatility",
-        "value": "26.4",
-        "ref5": "28.4",
-        "ref20": "22.6",
+        "value": "26.8",
+        "ref5": "28.8",
+        "ref20": "23.6",
         "signalFast": -1,
         "signalSlow": -1,
         "weight": 1
@@ -163,10 +163,10 @@
         "id": "hy",
         "name": "High-yield spread",
         "note": "Credit stress",
-        "value": "3.72%",
-        "ref5": "3.62%",
-        "ref20": "3.41%",
-        "signalFast": -1,
+        "value": "3.77%",
+        "ref5": "3.73%",
+        "ref20": "3.46%",
+        "signalFast": 0,
         "signalSlow": -1,
         "weight": 1
       },
@@ -174,10 +174,10 @@
         "id": "spx",
         "name": "S&P 500",
         "note": "Equities",
-        "value": "7,201",
-        "ref5": "7,170",
-        "ref20": "7,451",
-        "signalFast": 0,
+        "value": "7,183",
+        "ref5": "7,141",
+        "ref20": "7,423",
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -185,10 +185,10 @@
         "id": "audjpy",
         "name": "AUD/JPY",
         "note": "FX risk barometer",
-        "value": "105.68",
-        "ref5": "105.40",
-        "ref20": "108.20",
-        "signalFast": 0,
+        "value": "106.39",
+        "ref5": "105.53",
+        "ref20": "108.00",
+        "signalFast": 1,
         "signalSlow": -1,
         "weight": 1
       },
@@ -259,11 +259,11 @@
     ]
   },
   "dxy": {
-    "value": 103.737,
-    "ema": 103.109,
-    "emaPrev": 102.608,
+    "value": 103.871,
+    "ema": 103.182,
+    "emaPrev": 102.708,
     "trend": 1,
-    "asOf": "Nov 26"
+    "asOf": "Nov 27"
   },
   "unmatched": [
     "Core PCE Price Index m/m"
