@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T21:56:56.345Z",
+  "updatedAt": "2026-11-27T04:34:18.369Z",
   "indicators": {
     "gdp": {
       "actual": 4.3,
@@ -260,8 +260,8 @@
   },
   "dxy": {
     "value": 103.737,
-    "ema": 103.11,
-    "emaPrev": 102.609,
+    "ema": 103.109,
+    "emaPrev": 102.608,
     "trend": 1,
     "asOf": "Nov 26"
   },
